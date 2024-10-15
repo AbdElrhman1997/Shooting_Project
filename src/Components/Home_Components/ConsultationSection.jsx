@@ -1,4 +1,3 @@
-import React from "react";
 import consultation_section_image from "../../assets/Images/HomeImages/consultation_section_image.jpg";
 
 const ConsultationSection = () => {

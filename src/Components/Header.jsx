@@ -83,7 +83,7 @@ const Header = () => {
                 className="min-w-[130px] w-full h-full object-cover"
               />
             </a>
-            <ul className="flex justify-center items-center xl:gap-x-8 lg:gap-x-8 gap-x-3 font-bold">
+            <ul className="flex justify-center items-center xl:gap-x-12 lg:gap-x-8 gap-x-3 font-bold">
               <li>
                 <NavLink
                   to="/"
@@ -122,7 +122,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="/Our_business"
+                  to="/our_projects"
                   className={({ isActive }) =>
                     isActive
                       ? "flex flex-col text-[#ec3237] text-sm"
@@ -134,7 +134,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="/Our_customers"
+                  to="/our_clients"
                   className={({ isActive }) =>
                     isActive
                       ? "flex flex-col text-[#ec3237] text-sm"
