@@ -2,5 +2,206 @@
   "common": {},
   "HomePage": {
     "Header": {}
+  },
+  "header": {
+    "email": "shootingstar.creativity@gmail.com",
+    "language_button": "ENGLISH",
+    "nav": {
+      "home": "Home",
+      "about_us": "About Us",
+      "services": "Services",
+      "our_projects": "Our Projects",
+      "our_clients": "Our Clients",
+      "industry": "Industry",
+      "blogs": "Blogs",
+      "employment": "Training & Employment",
+      "contact": "Contact Us"
+    },
+    "menu": {
+      "home": "Home",
+      "about_us": "About Us",
+      "services": "Services",
+      "our_projects": "Our Projects",
+      "our_clients": "Our Clients",
+      "industry": "Industry",
+      "blogs": "Blogs",
+      "employment": "Training & Employment"
+    }
+  },
+  "consultation": {
+    "title": "Start your project now and benefit",
+    "freeConsultation": "from a Free Consultation",
+    "experts": "with a select group of the best project management and marketing experts",
+    "bookNow": "Book your appointment now",
+    "enjoyCoffee": "Enjoy your morning or evening coffee with us",
+    "companyPark": "at our upscale park at the top of Kingdom Towers"
+  },
+  "goals": {
+    "title": "Our Goals",
+    "goal1": "Create a non-traditional product that can compete",
+    "goal2": "Build your brand in a unique and professional way",
+    "goal3": "Create content marketing to achieve your digital goals",
+    "visionTitle": "Our Vision",
+    "vision": "Enhancing the product or service to reach your vision"
+  },
+  "journey": {
+    "title": "Our Journey",
+    "history": "We at Shot Eng have a long history in establishing startups and digital marketing for over 150 brands. We faced the biggest challenges and were able to solve them, achieving significant numbers and results in our digital transformation journey.",
+    "uniquePresence": "We have a unique presence in the market that allowed us to",
+    "productProjects": "launch product manufacturing projects",
+    "uniquePresence_2": "In a different way and with competitive quality to support the Saudi product, which makes it easier for us to market the product according to the standards of success and industry, avoiding imitation projects and cloning the product.",
+    "supportedProjects": "The supported projects we have include",
+    "supportedProjectsList": "(Perfumes - Cosmetics - Clothing - Restaurants - Cafes)"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "discoverClients": "Discover Our Clients"
+  },
+  "services": {
+    "brandBuilding": "Brand Building",
+    "spatialIdentity": "Spatial Identity & Exhibitions",
+    "websiteDesign": "Website & Store Design & Development",
+    "marketing": "Marketing & Advertising",
+    "photography": "Photography & Production",
+    "socialMediaManagement": "Social Media Management",
+    "industry": "Industry",
+    "printing": "Printing",
+    "creations": "Our Creations"
+  },
+  "shootingTeam": {
+    "title": "Shooting Team",
+    "expertise": "A team of experts specialized in marketing, search engine optimization, content creation, and social media.",
+    "projectManagement": "We excel, innovate, develop, and achieve the success of your project."
+  },
+  "footer": {
+    "description": "The first agency that supports Saudi products from industry to marketing to ensure your victory over market challenges",
+    "addressTitle": "Address",
+    "address": "Office No. 902, 9th Floor, Al-Noor Passage, Al-Olaya District, Riyadh 12222, Kingdom of Saudi Arabia",
+    "contactTitle": "Contact Us",
+    "phone": "(+966) 555992584",
+    "email": "shootingstar.Creativity@gmail.com",
+    "socialMediaTitle": "Social Media",
+    "rights": "All rights reserved for Shoot Ang Marketing Services ©"
+  },
+  "aboutUs": {
+    "title": "Who We Are",
+    "description1": "We are Shoot Ang. We have a long history in establishing startups and digital marketing and media for over 150 brands. We have faced the challenges related to client projects and achieved significant numbers and results in our digital transformation journey. We have left our unique and initial mark in the market, through which we were able to ",
+    "highlight": "launch product manufacturing projects",
+    "description2": " in a different way and competitive quality to support Saudi products, making it easier for us to market the product according to the standards of success and manufacturing, avoiding duplicated projects and product replication.",
+    "gifAlt": "Shooting GIF Logo"
+  },
+  "services_2": {
+    "title": "Our Services",
+    "description_1": "We offer a range of services to help you achieve your business goals.",
+    "description_2": "Our team is dedicated to providing high-quality solutions tailored to your needs.",
+    "brand_identity": "Brand Identity",
+    "spatial_identity": "Spatial Identity",
+    "ecommerce": "E-commerce",
+    "photography_production": "Photography Production",
+    "marketing_advertising": "Marketing Advertising",
+    "branding": "Branding",
+    "graphic_design": "Graphic Design",
+    "consulting": "Consulting",
+    "explore": "Explore",
+    "highlight_brand": "Establish and highlight the brand identity to distinguish emerging companies and showcase their essence through a set of values, characteristics, and symbols that can give them a distinctive position in competition with other companies.",
+    "start_project": "We start your project by entering our operating rooms, which are our special place consisting of several studio shoot rooms - the idea incubation room and the content room - and a team meeting room. From here, the project begins with artistic creativity."
+  },
+  "ourProjects": {
+    "title": "Our Projects",
+    "subtitlePart1": "It is our new birth",
+    "subtitlePart2": "that we gain with the client throughout our journey",
+    "contentLeft": "Our team, before having the usual work skills, distinguished themselves with talent and its refinement",
+    "contentRight": "We have our old history that plays an important role in leaving an impact on the minds of your customers",
+    "services": {
+      "brandBuilding": "Brand Building",
+      "identityBuilding": "Identity and Exhibition Building",
+      "webDesign": "Website and Store Design and Development",
+      "marketing": "Marketing and Advertising",
+      "photography": "Photography and Production",
+      "socialMediaManagement": "Social Media Management",
+      "industry": "Industry",
+      "printing": "Printing"
+    },
+    "servicesItem1": {
+      "title": "AI-Shabout Seafood Restaurant",
+      "subTitle": "Branding - Photography - Social Media"
+    },
+    "servicesItem3": {
+      "title": "AI-Shabout Seafood Restaurant",
+      "subTitle": "Branding - Photography - Social Media"
+    },
+    "shootingGifLogo": "Shooting GIF Logo"
+  },
+  "our_clients": {
+    "title": "Our Clients",
+    "subtitle": "Our clients.. Our Diwan and our client.. is the approach of our poem",
+    "achievement_title": "The Great Achievement",
+    "achievement_subtitle": "Is what eternity immortalizes in the mind of history",
+    "opportunity_title": "Opportunities don't just happen.. you have to create them",
+    "journey_title": "We are the companions of the journey.. to create the idea"
+  },
+  "industry": {
+    "title": "Industry",
+    "description1": "Shot Ing is distinguished as the first agency that supports the product from industry to marketing, as it uses its first weapon, which is content marketing. The quality of the product is its primary goal, upon which the successful marketing strategy is built.",
+    "description2": "Due to Shot Ing's experience in the industry and quality standards, it helps upcoming project owners by adjusting quality standards and choosing new crafts that can provide them with the best industrial values, supported by delving into the fine details to the quality and professionalism of the external appearance.",
+    "printing": "Printing",
+    "explore": "Explore",
+    "exhibitions": "Exhibitions Theater Production",
+    "events": "Event Management",
+    "fragrances": "Fragrances",
+    "cosmetics": "Cosmetics",
+    "clothes": "Clothes",
+    "restaurant": "Restaurants",
+    "cafes": "Cafes"
+  },
+  "blogs": { "title": "Blogs", "read_more": "Read More" },
+  "employment": {
+    "welcome": {
+      "message": "Our approach is a language, and we are its letters. With your presence, our meanings are complete.",
+      "title": "Welcome, and a warm welcome to you."
+    },
+    "department": {
+      "title": "Employment Department",
+      "description": "At Shoot Ing, our employees are referred to as merchants of taste. We trade and sell taste before it becomes a product or service. We are looking for distinguished individuals with refined taste, who have both artistic talent and sufficient knowledge of market trends and creative experiences, to become our partners in this journey."
+    },
+    "training": {
+      "title": "Training Department",
+      "description": "This department is dedicated to individuals with talents and visions in the artistic and marketing fields, to join our team. The department aims to develop knowledge and skills, gaining the necessary experience to participate in the job market."
+    },
+    "form": {
+      "name": {
+        "placeholder": "Full Name"
+      },
+      "email": {
+        "placeholder": "Email"
+      },
+      "phone": {
+        "placeholder": "Phone Number"
+      },
+      "address": {
+        "placeholder": "Address"
+      },
+      "description": {
+        "placeholder": "Why do you want to join us?"
+      },
+      "upload": {
+        "label": "Upload Your Resume",
+        "prompt": "Drag & Drop or Click to Upload"
+      },
+      "submit": {
+        "button": "Submit"
+      }
+    },
+    "validation": {
+      "name": "Name is required",
+      "email": {
+        "invalid": "Invalid email address",
+        "required": "Email is required"
+      },
+      "phone": "Phone number is required",
+      "address": "Address is required",
+      "description": "Description is required",
+      "image": "Resume is required"
+    }
   }
 }

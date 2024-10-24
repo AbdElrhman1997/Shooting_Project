@@ -7,6 +7,9 @@ export default {
         black: "#212529", // Overrides default black with your custom color
         main: "#ec3237",
       },
+      textAlign: {
+        inherit: "inherit", // Add align-items: inherit
+      },
     },
   },
   plugins: [],

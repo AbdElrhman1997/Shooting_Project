@@ -1,57 +1,80 @@
 import GeneralFrame from "../Components/GeneralFrame";
-import Services_Images_1 from "../assets/Images/ServicesImages/Services_Images-1.jpg";
-import Services_Images_2 from "../assets/Images/ServicesImages/Services_Images-2.jpg";
-import Services_Images_3 from "../assets/Images/ServicesImages/Services_Images-3.jpg";
-import Services_Images_4 from "../assets/Images/ServicesImages/Services_Images-4.jpg";
-import Services_Images_5 from "../assets/Images/ServicesImages/Services_Images-5.jpg";
-import Services_Images_6 from "../assets/Images/ServicesImages/Services_Images-6.jpg";
-import Services_Images_7 from "../assets/Images/ServicesImages/Services_Images-7.jpg";
-import Services_Images_8 from "../assets/Images/ServicesImages/Services_Images-8.jpg";
-import Services_Images_9 from "../assets/Images/ServicesImages/Services_Images-9.jpg";
 import GIF_Logo from "../assets/Images/Icons/GIF_Logo.gif";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Pagination from "../Components/Pagination";
 
 const OurProjects = () => {
-  const ServicesItems = [
-    {
-      title: "AI-Shabout Seafood Restaurant",
-      subTitle:
-        "العلامات التجارية -  التصوير الفوتوغرافي -  وسائل التواصل الأجتماعي",
-      image: Services_Images_1,
-    },
-    { title: "", subTitle: "", image: Services_Images_2 },
-    {
-      title: "AI-Shabout Seafood Restaurant",
-      subTitle:
-        "العلامات التجارية -  التصوير الفوتوغرافي -  وسائل التواصل الأجتماعي",
-      image: Services_Images_3,
-    },
-    { title: "", subTitle: "", image: Services_Images_4 },
-    { title: "", subTitle: "", image: Services_Images_5 },
-    { title: "", subTitle: "", image: Services_Images_6 },
-    { title: "", subTitle: "", image: Services_Images_7 },
-    { title: "", subTitle: "", image: Services_Images_8 },
-    { title: "", subTitle: "", image: Services_Images_9 },
-  ];
+  const [Services, setServices] = useState([]);
+  const { i18n, t } = useTranslation();
+  const [loading, setLoading] = useState(false);
+  const [pagination, setPagination] = useState({
+    count: 0,
+    current_page: 1,
+    per_page: 6,
+    total: 0,
+    total_pages: 1,
+  });
+
+  const fetchServices = async (page = 1) => {
+    setLoading(true);
+    try {
+      const response = await axios.get(
+        `https://admin.shootingads.net/api/getBrand`,
+        {
+          params: { currentPage: page },
+        }
+      );
+      const { data, pagination: paginationFromService } = response.data;
+      setServices(data);
+      setPagination(paginationFromService);
+    } catch (error) {
+      console.error("Error fetching posts", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchServices(pagination.current_page);
+  }, [pagination.current_page]);
+
+  const handlePageChange = (page) => {
+    setPagination((prev) => ({ ...prev, current_page: page }));
+    fetchServices(page);
+  };
 
   return (
     <section>
       <GeneralFrame
         content={
-          <div className="bg-white text-black rounded-[30px]  py-12" dir="rtl">
-            <div className="">
+          <div
+            className="bg-white text-black rounded-[10px] py-12"
+            dir={i18n.language === "ar" ? "rtl" : "ltr"}
+          >
+            <div>
               <div className="bg-white">
                 <p className="col-span-6 text-[#000] border-b-[#ec3237] border-b-[6px] w-fit 2xl:mx-12 xl:mx-12 lg:mx-12 md:mx-8 mx-auto pb-4 xl:text-5xl lg:text-5xl md:text-5xl text-3xl font-bold">
-                  أعمالنا
+                  {t("ourProjects.title")}
                 </p>
-                <p className="2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl text-xl mt-8 font-bold 2xl:px-12 xl:px-12 lg:px-12 md:px-8 px-4 2xl:text-right xl:text-right lg:text-right md:text-right text-center">
-                  هي مولودنا الجديد الذي نحظي به مع العميل طوال مسيرتنا
+                <p
+                  className={`2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl text-lg mt-8 font-bold 2xl:px-12 xl:px-12 lg:px-12 md:px-8 px-4 text-center  ${
+                    i18n.language === "ar"
+                      ? "2xl:text-right xl:text-right lg:text-right md:text-right"
+                      : "2xl:text-left xl:text-left lg:text-left md:text-left"
+                  }`}
+                >
+                  <span className="2xl:text-4xl xl:text-4xl lg:text-4xl md:text-4xl text-xl">
+                    {t("ourProjects.subtitlePart1")}
+                  </span>{" "}
+                  {t("ourProjects.subtitlePart2")}
                 </p>
-                <div className="bg-white flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row flex-col font-bold items-center w-f pb-10 2xl:pt-12 xl:pt-12 lg:pt-12 md:pt-8 pt-6 rounded-[30px]">
-                  <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-16 xl:px-16 lg:px-8  px-4">
-                    <p className="text-justify 2xl:my-6 xl:my-6 lg:my-6 md:my-6 my-0 mt-4 text-[17px] leading-8">
-                      فريقنا قبل ان يمون لديهم مهارات العمل العادية تميزوا بصفة
-                      الموهبة وثقلها وتفرها
+                <div className="bg-white flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row flex-col font-bold items-center w-f pb-10 2xl:pt-12 xl:pt-12 lg:pt-12 md:pt-8 rounded-[30px]">
+                  <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-16 xl:px-16 lg:px-8 px-4">
+                    <p className="text-justify 2xl:my-6 xl:my-6 lg:my-6 md:my-6 my-0 mt-4 text-[20px] leading-8">
+                      {t("ourProjects.contentLeft")}
                     </p>
                   </div>
                   <div
@@ -62,10 +85,9 @@ const OurProjects = () => {
                       backgroundColor: "black",
                     }}
                   ></div>
-                  <div className=" 2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-16 xl:px-16 lg:px-8 px-4  2xl:block xl:block lg:block md:block inline">
-                    <p className="text-justify 2xl:my-6 xl:my-6 lg:my-6 md:my-6 my-0 text-[17px] leading-8 ">
-                      لنا تاريخنا القديم الذي يلعب دور مهم في أن يترك أثر في
-                      أذهان عملائكم
+                  <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-16 xl:px-16 lg:px-8 px-4 2xl:block xl:block lg:block md:block inline">
+                    <p className="text-justify 2xl:my-6 xl:my-6 lg:my-6 md:my-6 my-0 text-[20px] leading-8 ">
+                      {t("ourProjects.contentRight")}
                     </p>
                   </div>
                 </div>
@@ -81,56 +103,62 @@ const OurProjects = () => {
         dir="rtl"
       >
         <div className="flex flex-wrap justify-center xl:text-[1.7rem] lg:text-[1.2rem] md:text-[1rem] text-[14px] text-center leading-relaxed font-semibold">
-          <p className="hover:text-[#ec3237] transition  duration-400 cursor-pointer">
-            بناء العلامة التجارية
+          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
+            {t("ourProjects.services.brandBuilding")}
           </p>
           <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition  duration-400 cursor-pointer">
-            بناء الهوية المكانية و المعارض
+          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
+            {t("ourProjects.services.identityBuilding")}
           </p>
           <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition  duration-400 cursor-pointer">
-            تصميم المواقع الإلكترونية و المتاجر و برمجتها
+          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
+            {t("ourProjects.services.webDesign")}
           </p>
           <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition  duration-400 cursor-pointer">
-            التسويق و الإعلان
+          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
+            {t("ourProjects.services.marketing")}
           </p>
           <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition  duration-400 cursor-pointer">
-            التصوير و الإنتاج
+          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
+            {t("ourProjects.services.photography")}
           </p>
           <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition  duration-400 cursor-pointer">
-            إدارة وسائل التواصل الإجتماعي
+          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
+            {t("ourProjects.services.socialMediaManagement")}
           </p>
           <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition  duration-400 cursor-pointer">
-            الصناعة
+          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
+            {t("ourProjects.services.industry")}
           </p>
           <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition  duration-400 cursor-pointer">
-            الطباعة
+          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
+            {t("ourProjects.services.printing")}
           </p>
         </div>
       </div>
       <div className="grid grid-cols-6 xl:px-16 lg:px-16 md:px-8 px-4 gap-4 my-8">
-        {ServicesItems?.map((item, index) => {
+        {Services?.map((item, index) => {
           return (
             <Link
               key={index + 1}
-              className="relative xl:col-span-2 lg:col-span-2 md:col-span-3 col-span-3 cursor-pointer overflow-hidden group" // Added 'group' for hover control
+              className="relative xl:col-span-2 lg:col-span-2 md:col-span-3 col-span-3 cursor-pointer overflow-hidden group"
               to={"/services/1"}
             >
               <img
-                src={item?.image}
-                alt={item?.title}
-                className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" // Added group-hover
+                src={`https://admin.shootingads.net/public/images/${item?.image}`}
+                alt={
+                  i18n.language === "en"
+                    ? item?.brand_name_en
+                    : item?.brand_name_ar
+                }
+                className="w-full h-52 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
               />
               <div className="service-hover w-full h-full absolute top-0 left-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
               <div className="absolute bottom-6 left-0 mx-4 text-right font-bold transition-all duration-300 ease-in-out">
-                <p className="text-white text-[17px]  opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
-                  {item?.title}
+                <p className="text-white text-[17px] opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
+                  {i18n.language === "en"
+                    ? item?.brand_name_en
+                    : item?.brand_name_ar}
                 </p>
                 <p className="text-white text-[13px] opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
                   {item?.subTitle}
@@ -140,7 +168,18 @@ const OurProjects = () => {
           );
         })}
       </div>
-      <img src={GIF_Logo} alt="Shooting GIF Logo" className="mt-6 -mb-6" />
+      <div className="col-span-12">
+        <Pagination
+          currentPage={pagination?.current_page}
+          totalPages={pagination?.total_pages}
+          onPageChange={handlePageChange}
+        />
+      </div>
+      <img
+        src={GIF_Logo}
+        alt={t("ourProjects.shootingGifLogo")}
+        className="mt-6 -mb-6"
+      />
     </section>
   );
 };

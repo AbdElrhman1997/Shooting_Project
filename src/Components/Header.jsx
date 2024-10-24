@@ -5,39 +5,54 @@ import {
   faInstagram,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom"; // Import useParams to get language
 import { Helmet } from "react-helmet";
-import LightLogo from "../assets/Images/HomeImages/Light_Logo.png";
+import LightLogo from "../assets/Images/HomeImages/Light_Logo.webp";
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; // Import profile icon
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  const { i18n, t } = useTranslation();
+  const { lang } = useParams(); // Get the current language from the URL
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const changeLanguage = () => {
+    const newLanguage = i18n.language === "en" ? "ar" : "en";
+    const currentPath = window.location.pathname;
+    const newPath = currentPath.replace(`/${i18n.language}`, `/${newLanguage}`);
+
+    i18n.changeLanguage(newLanguage);
+    navigate(newPath);
+  };
+
   return (
-    <div dir="rtl">
+    <div dir={i18n.language === "ar" ? "rtl" : "ltr"}>
       <Helmet>
         <link rel="preload" as="image" href={LightLogo} />
       </Helmet>
+      {/* Header for desktop */}
       <header className="relative bg-white justify-center items-center h-10 transition-all ease-in-out duration-500 text-[#212529] border-b-[1px] border-black px-20 xl:flex lg:flex md:flex hidden">
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-between items-center">
             <div className="flex items-center space-x-4">
               <div className="email flex items-center">
-                <p className="m-0 text-sm font-medium">
-                  shootingstar.creativity@gmail.com
-                </p>
+                <p className="m-0 text-sm font-medium">{t("header.email")}</p>
               </div>
             </div>
             <div className="flex items-center">
               <div className="flex items-center ">
                 <div className="relative flex items-center cursor-pointer ml-2">
-                  <button className="bg-transparent border-0 outline-none">
-                    ENGLISH
+                  <button
+                    className="bg-transparent border-0 outline-none"
+                    onClick={changeLanguage}
+                  >
+                    {i18n.language === "en" ? "العربية" : "ENGLISH"}
                   </button>
                 </div>
                 <a className="icon flex justify-center items-center w-10 h-10 cursor-pointer border-r-[1.5px] border-black">
@@ -70,11 +85,12 @@ const Header = () => {
         </div>
       </header>
 
-      <nav className="bg-white xl:flex lg:flex md:flex hidden px-20 py-4 ">
+      {/* Navigation */}
+      <nav className="bg-white xl:flex lg:flex md:flex hidden px-20 py-2 ">
         <div className="container mx-auto">
           <div className="flex justify-between items-center">
             <a
-              href="./index.html"
+              href={`/${lang}/home`}
               className="logo w-36 transform scale-150 me-6"
             >
               <img
@@ -86,251 +102,188 @@ const Header = () => {
             <ul className="flex justify-center items-center xl:gap-x-12 lg:gap-x-8 gap-x-3 font-bold">
               <li>
                 <NavLink
-                  to="/"
+                  to={`/${lang}/home`}
                   className={({ isActive }) =>
                     isActive
                       ? "flex flex-col text-[#ec3237] text-sm"
                       : "flex flex-col text-black text-sm"
                   }
                 >
-                  <span className="text-lg">01</span> الرئيسية
+                  <span className="text-lg">01</span> {t("header.nav.home")}
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/about_us"
+                  to={`/${lang}/about_us`}
                   className={({ isActive }) =>
                     isActive
                       ? "flex flex-col text-[#ec3237] text-sm"
                       : "flex flex-col text-black text-sm"
                   }
                 >
-                  <span className="text-lg">02</span> من نحن
+                  <span className="text-lg">02</span> {t("header.nav.about_us")}
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/services"
+                  to={`/${lang}/services`}
                   className={({ isActive }) =>
                     isActive
                       ? "flex flex-col text-[#ec3237] text-sm"
                       : "flex flex-col text-black text-sm"
                   }
                 >
-                  <span className="text-lg">03</span> الخدمات
+                  <span className="text-lg">03</span> {t("header.nav.services")}
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/our_projects"
+                  to={`/${lang}/our_projects`}
                   className={({ isActive }) =>
                     isActive
                       ? "flex flex-col text-[#ec3237] text-sm"
                       : "flex flex-col text-black text-sm"
                   }
                 >
-                  <span className="text-lg">04</span> أعمالنا
+                  <span className="text-lg">04</span>{" "}
+                  {t("header.nav.our_projects")}
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/our_clients"
+                  to={`/${lang}/our_clients`}
                   className={({ isActive }) =>
                     isActive
                       ? "flex flex-col text-[#ec3237] text-sm"
                       : "flex flex-col text-black text-sm"
                   }
                 >
-                  <span className="text-lg">05</span> عملائنا
+                  <span className="text-lg">05</span>{" "}
+                  {t("header.nav.our_clients")}
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/Industry"
+                  to={`/${lang}/industry`}
                   className={({ isActive }) =>
                     isActive
                       ? "flex flex-col text-[#ec3237] text-sm"
                       : "flex flex-col text-black text-sm"
                   }
                 >
-                  <span className="text-lg">06</span> الصناعة
+                  <span className="text-lg">06</span> {t("header.nav.industry")}
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/blogs"
+                  to={`/${lang}/blogs`}
                   className={({ isActive }) =>
                     isActive
                       ? "flex flex-col text-[#ec3237] text-sm"
                       : "flex flex-col text-black text-sm"
                   }
                 >
-                  <span className="text-lg">07</span> المدونات
+                  <span className="text-lg">07</span> {t("header.nav.blogs")}
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/recruitment"
+                  to={`/${lang}/employment`}
                   className={({ isActive }) =>
                     isActive
                       ? "flex flex-col text-[#ec3237] text-sm"
                       : "flex flex-col text-black text-sm"
                   }
                 >
-                  <span className="text-lg">08</span> التدريب و التوظيف
+                  <span className="text-lg">08</span>{" "}
+                  {t("header.nav.employment")}
                 </NavLink>
               </li>
             </ul>
-
-            <div className="xl:flex lg:flex hidden bg-black text-white px-4 py-2 rounded text-[1.2vw] items-center justify-center text-center">
-              <a href="./register.html">تواصل معانا</a>
-            </div>
-            <div className="icon hidden cursor-pointer">
-              <FontAwesomeIcon icon={["fas", "bars"]} />
-            </div>
+            <NavLink
+              to={`/${lang}/contact`}
+              className="text-sm font-bold text-black px-2 py-2 border-[1px] border-black rounded-lg cursor-pointer mx-1"
+            >
+              {t("header.nav.contact")}
+            </NavLink>
           </div>
         </div>
       </nav>
-      <nav className="bg-white xl:hidden lg:hidden md:hidden flex pe-6 ps-12">
-        <div className="flex justify-between w-full">
-          <div className="lg:hidden flex items-center">
-            <button
-              onClick={toggleMobileMenu}
-              className="text-[#ec3237] text-2xl"
-            >
-              {isMobileMenuOpen ? (
-                <FaTimes /> // Close icon when the menu is open
-              ) : (
-                <FaBars /> // Menu icon when the menu is closed
-              )}
+
+      {/* Mobile Menu */}
+      <div className="bg-white xl:hidden lg:hidden md:hidden flex justify-between px-8 py-4 shadow-md">
+        <a href="/" className="logo w-36">
+          <img
+            src={LightLogo}
+            alt="Logo"
+            className="w-full h-full object-cover"
+          />
+        </a>
+        <div className="flex justify-center items-center text-2xl font-bold text-black space-x-8">
+          <button onClick={toggleMobileMenu} className="text-black">
+            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
+      </div>
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 bg-white z-50">
+          <div className="flex justify-end px-8 py-4">
+            <button onClick={toggleMobileMenu} className="text-black text-2xl">
+              <FaTimes />
             </button>
           </div>
-          <div>
-            <img
-              src={LightLogo}
-              alt="Logo"
-              className="min-w-[100px] w-[200px] h-full object-cover"
-            />
-          </div>
-        </div>
-        {isMobileMenuOpen && (
-          <ul
-            className="fixed top-[64px] right-0 h-full w-full bg-white transform transition-all duration-500 ease-in-out z-50 lg:hidden text-center flex flex-col gap-y-6 font-bold clip-path-open"
-            style={{ transition: "clip-path 0.5s ease-in-out" }}
-          >
+          <ul className="flex flex-col items-center space-y-4 mt-4 text-lg font-bold">
             <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive
-                    ? "flex flex-col text-[#ec3237] text-sm mt-6"
-                    : "flex flex-col text-black text-sm mt-6"
-                }
-                onClick={toggleMobileMenu}
-              >
-                <span className="text-lg">01</span> الرئيسية
+              <NavLink to={`/${lang}/home`} className="text-black">
+                {t("header.menu.home")}
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/about_us"
-                className={({ isActive }) =>
-                  isActive
-                    ? "flex flex-col text-[#ec3237] text-sm"
-                    : "flex flex-col text-black text-sm"
-                }
-                onClick={toggleMobileMenu}
-              >
-                <span className="text-lg">02</span> من نحن
+              <NavLink to={`/${lang}/about_us`} className="text-black">
+                {t("header.menu.about_us")}
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/services"
-                className={({ isActive }) =>
-                  isActive
-                    ? "flex flex-col text-[#ec3237] text-sm"
-                    : "flex flex-col text-black text-sm"
-                }
-                onClick={toggleMobileMenu}
-              >
-                <span className="text-lg">03</span> الخدمات
+              <NavLink to={`/${lang}/services`} className="text-black">
+                {t("header.menu.services")}
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Our_business"
-                className={({ isActive }) =>
-                  isActive
-                    ? "flex flex-col text-[#ec3237] text-sm"
-                    : "flex flex-col text-black text-sm"
-                }
-                onClick={toggleMobileMenu}
-              >
-                <span className="text-lg">04</span> أعمالنا
+              <NavLink to={`/${lang}/our_projects`} className="text-black">
+                {t("header.menu.our_projects")}
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Our_customers"
-                className={({ isActive }) =>
-                  isActive
-                    ? "flex flex-col text-[#ec3237] text-sm"
-                    : "flex flex-col text-black text-sm"
-                }
-                onClick={toggleMobileMenu}
-              >
-                <span className="text-lg">05</span> عملائنا
+              <NavLink to={`/${lang}/our_clients`} className="text-black">
+                {t("header.menu.our_clients")}
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/Industry"
-                className={({ isActive }) =>
-                  isActive
-                    ? "flex flex-col text-[#ec3237] text-sm"
-                    : "flex flex-col text-black text-sm"
-                }
-                onClick={toggleMobileMenu}
-              >
-                <span className="text-lg">06</span> الصناعة
+              <NavLink to={`/${lang}/industry`} className="text-black">
+                {t("header.menu.industry")}
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/blogs"
-                className={({ isActive }) =>
-                  isActive
-                    ? "flex flex-col text-[#ec3237] text-sm"
-                    : "flex flex-col text-black text-sm"
-                }
-                onClick={toggleMobileMenu}
-              >
-                <span className="text-lg">07</span> المدونات
+              <NavLink to={`/${lang}/blogs`} className="text-black">
+                {t("header.menu.blogs")}
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to="/recruitment"
-                className={({ isActive }) =>
-                  isActive
-                    ? "flex flex-col text-[#ec3237] text-sm"
-                    : "flex flex-col text-black text-sm"
-                }
-                onClick={toggleMobileMenu}
-              >
-                <span className="text-lg">08</span> التدريب و التوظيف
+              <NavLink to={`/${lang}/employment`} className="text-black">
+                {t("header.menu.employment")}
               </NavLink>
-            </li>
-            <li className="xl:hidden lg:hidden md:hidden flex bg-black text-white px-4 py-[10px] text-md items-center justify-center text-center rounded-md w-44 mx-auto">
-              <a href="./register.html">تواصل معانا</a>
-            </li>
-            <li className="xl:hidden lg:hidden md:hidden flex bg-black text-white px-4 py-[10px] text-xl items-center justify-center text-center rounded-md w-44 mx-auto">
-              <a href="./register.html">English</a>
             </li>
           </ul>
-        )}
-      </nav>
+          <div className="flex justify-center items-center mt-6">
+            <NavLink
+              to={`/${lang}/contact`}
+              className="text-sm font-bold text-black px-6 py-2 border-[1px] border-black rounded-lg"
+            >
+              {t("header.nav.contact")}
+            </NavLink>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

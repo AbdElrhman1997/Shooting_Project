@@ -24,6 +24,7 @@
 }
 body {
   overflow-x: hidden !important;
+  background-color: white !important; /* Your custom color */
 }
 
 .clip-path-closed {
@@ -178,6 +179,33 @@ body {
   right: 50%;
   transform: translateX(50%);
 }
+.test {
+}
+.center-line-services {
+  height: 170px;
+  width: 1.35px;
+  background-color: black;
+  position: relative;
+}
+.center-line-services::before {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  width: 5px;
+  height: 40px;
+  top: 20%;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.details-p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 2.5;
+}
+
 /* 
 .thead-services::before {
   content: "";
@@ -197,3 +225,11 @@ body {
   background: #fff;
   top: -38px;
 } */
+
+.img {
+  max-width: fit-content !important;
+}
+
+.my-text-inherit {
+  text-align: inherit;
+}

@@ -33,7 +33,7 @@ const Spatial_Identity = () => {
     <section>
       <GeneralFrame
         content={
-          <div className="bg-white text-black rounded-[30px]  py-12" dir="rtl">
+          <div className="bg-white text-black rounded-[10px]  py-12" dir="rtl">
             <div className="">
               <div className="bg-white">
                 <p className="2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl text-xl font-bold 2xl:px-12 xl:px-12 lg:px-12 md:px-8 px-4 2xl:text-right xl:text-right lg:text-right md:text-right text-center">
