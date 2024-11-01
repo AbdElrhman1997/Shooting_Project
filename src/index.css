@@ -233,3 +233,8 @@ body {
 .my-text-inherit {
   text-align: inherit;
 }
+
+.test {
+  text-align: justify;
+  word-spacing: -2px;
+}

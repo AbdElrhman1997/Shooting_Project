@@ -68,18 +68,64 @@ const Blogs = () => {
                   className="w-full  h-full rounded-tr-[10px] rounded-tl-[10px]"
                 />
               </div>
-              <div className="flex text-xl mt-6 justify-center font-bold">
-                <p className="hover:text-[#ec3237] transition  duration-400 cursor-pointer">
-                  بناء العلامة التجارية
-                </p>
+              <div className="flex flex-wrap justify-center xl:text-[1.8rem] lg:text-[1.6rem] md:text-[1rem] text-[11px] text-center leading-relaxed font-semibold px-4 py-4">
+                <Link
+                  to={`/${i18n.language}/brands_projects`}
+                  className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+                >
+                  {t("services.brandBuilding")}
+                </Link>
                 <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-                <p className="hover:text-[#ec3237] transition  duration-400 cursor-pointer">
-                  بناء الهوية المكانية و المعارض
-                </p>
+                <Link
+                  to={`/${i18n.language}/spatial_identity`}
+                  className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+                >
+                  {t("services.spatialIdentity")}
+                </Link>
                 <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-                <p className="hover:text-[#ec3237] transition  duration-400 cursor-pointer">
-                  التسويق و الإعلان
-                </p>
+                <Link
+                  to={`/${i18n.language}/websites_projects`}
+                  className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+                >
+                  {t("services.websiteDesign")}
+                </Link>
+                <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
+                <Link
+                  to={`/${i18n.language}/photos_projects`}
+                  className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+                >
+                  {t("services.marketing")}
+                </Link>
+                <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
+                <Link
+                  to={`/${i18n.language}/markting`}
+                  className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+                >
+                  {t("services.photography")}
+                </Link>
+                <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
+                <Link
+                  to={`/${i18n.language}/social_media`}
+                  className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+                >
+                  {t("services.socialMediaManagement")}
+                </Link>
+                <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
+                <Link
+                  to={`/${i18n.language}/seo`}
+                  className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+                >
+                  {t("services.seo")}
+                </Link>
+                <span className="text-[#ec3237] mx-[6px] font-bold 2xl:block xl:block lg:block md:block hidden">
+                  |
+                </span>
+                <Link
+                  to={`/${i18n.language}/industry`}
+                  className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+                >
+                  {t("services.industry")}
+                </Link>
               </div>
               <div className="grid grid-cols-12 xl:gap-12 lg:gap-12 md:gap-6 gap-y-6 py-8 px-4">
                 {loading ? (
@@ -125,8 +171,13 @@ const Blogs = () => {
           </div>
         }
       />
-
-      <img src={GIF_Logo} alt="Shooting GIF Logo" className="mt-6 -mb-6" />
+      <div className="w-full h-full flex justify-center items-center ">
+        <img
+          src={GIF_Logo}
+          alt="Shooting GIF Logo"
+          className="xl:w-48 lg:w-48 md:w-48 w-40 xl:-mb-12 lg:-mb-12 md:-mb-12 -mb-[120px] xl:mt-12 lg:mt-12 md:mt-12 mt-12   "
+        />
+      </div>
     </section>
   );
 };

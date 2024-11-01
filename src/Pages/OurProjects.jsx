@@ -103,37 +103,63 @@ const OurProjects = () => {
         dir="rtl"
       >
         <div className="flex flex-wrap justify-center xl:text-[1.7rem] lg:text-[1.2rem] md:text-[1rem] text-[14px] text-center leading-relaxed font-semibold">
-          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
-            {t("ourProjects.services.brandBuilding")}
-          </p>
+          <Link
+            to={`/${i18n.language}/brands_projects`}
+            className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+          >
+            {t("services.brandBuilding")}
+          </Link>
           <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
-            {t("ourProjects.services.identityBuilding")}
-          </p>
+          <Link
+            to={`/${i18n.language}/spatial_identity`}
+            className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+          >
+            {t("services.spatialIdentity")}
+          </Link>
           <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
-            {t("ourProjects.services.webDesign")}
-          </p>
+          <Link
+            to={`/${i18n.language}/websites_projects`}
+            className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+          >
+            {t("services.websiteDesign")}
+          </Link>
           <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
-            {t("ourProjects.services.marketing")}
-          </p>
+          <Link
+            to={`/${i18n.language}/photos_projects`}
+            className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+          >
+            {t("services.marketing")}
+          </Link>
           <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
-            {t("ourProjects.services.photography")}
-          </p>
+          <Link
+            to={`/${i18n.language}/markting`}
+            className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+          >
+            {t("services.photography")}
+          </Link>
           <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
-            {t("ourProjects.services.socialMediaManagement")}
-          </p>
+          <Link
+            to={`/${i18n.language}/social_media`}
+            className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+          >
+            {t("services.socialMediaManagement")}
+          </Link>
           <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
-            {t("ourProjects.services.industry")}
-          </p>
-          <span className="text-[#ec3237] mx-[6px] font-bold">|</span>
-          <p className="hover:text-[#ec3237] transition duration-400 cursor-pointer">
-            {t("ourProjects.services.printing")}
-          </p>
+          <Link
+            to={`/${i18n.language}/seo`}
+            className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+          >
+            {t("services.seo")}
+          </Link>
+          <span className="text-[#ec3237] mx-[6px] font-bold 2xl:block xl:block lg:block md:block hidden">
+            |
+          </span>
+          <Link
+            to={`/${i18n.language}/industry`}
+            className="hover:text-[#ec3237] transition duration-400 cursor-pointer"
+          >
+            {t("services.industry")}
+          </Link>
         </div>
       </div>
       <div className="grid grid-cols-6 xl:px-16 lg:px-16 md:px-8 px-4 gap-4 my-8">
@@ -175,11 +201,13 @@ const OurProjects = () => {
           onPageChange={handlePageChange}
         />
       </div>
-      <img
-        src={GIF_Logo}
-        alt={t("ourProjects.shootingGifLogo")}
-        className="mt-6 -mb-6"
-      />
+      <div className="w-full h-full flex justify-center items-center text-black">
+        <img
+          src={GIF_Logo}
+          alt="Shooting GIF Logo"
+          className="xl:w-48 lg:w-48 md:w-48 w-40 xl:-mb-12 lg:-mb-12 md:-mb-12 -mb-[120px] xl:mt-12 lg:mt-12 md:mt-12 mt-12   "
+        />
+      </div>
     </section>
   );
 };

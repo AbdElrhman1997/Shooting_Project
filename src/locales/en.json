@@ -4,7 +4,7 @@
     "Header": {}
   },
   "header": {
-    "email": "shootingstar.creativity@gmail.com",
+    "email": "info@shootingads.net",
     "language_button": "ENGLISH",
     "nav": {
       "home": "Home",
@@ -59,13 +59,13 @@
   },
   "services": {
     "brandBuilding": "Brand Building",
-    "spatialIdentity": "Spatial Identity & Exhibitions",
+    "spatialIdentity": "Spatial Identity",
     "websiteDesign": "Website & Store Design & Development",
     "marketing": "Marketing & Advertising",
     "photography": "Photography & Production",
     "socialMediaManagement": "Social Media Management",
+    "seo": "Seo",
     "industry": "Industry",
-    "printing": "Printing",
     "creations": "Our Creations"
   },
   "shootingTeam": {
@@ -78,8 +78,8 @@
     "addressTitle": "Address",
     "address": "Office No. 902, 9th Floor, Al-Noor Passage, Al-Olaya District, Riyadh 12222, Kingdom of Saudi Arabia",
     "contactTitle": "Contact Us",
-    "phone": "(+966) 555992584",
-    "email": "shootingstar.Creativity@gmail.com",
+    "phone": "+966555992584",
+    "email": "info@shootingads.net",
     "socialMediaTitle": "Social Media",
     "rights": "All rights reserved for Shoot Ang Marketing Services ©"
   },
@@ -88,6 +88,8 @@
     "description1": "We are Shoot Ang. We have a long history in establishing startups and digital marketing and media for over 150 brands. We have faced the challenges related to client projects and achieved significant numbers and results in our digital transformation journey. We have left our unique and initial mark in the market, through which we were able to ",
     "highlight": "launch product manufacturing projects",
     "description2": " in a different way and competitive quality to support Saudi products, making it easier for us to market the product according to the standards of success and manufacturing, avoiding duplicated projects and product replication.",
+    "description3": "Since the beginning of our journey, with our complete reliance on analysis, monitoring, project management, advertising, and marketing, Shoot Eng now supports the product from manufacturing to marketing for all its clients. The name Shoot Eng reflects the company’s vision and way of working. We work passionately to hit our clients' marketing goals and increase their sales.",
+    "description4": "Throughout the journey, and due to the large number of clients in northern and central Riyadh, we moved to our third headquarters where we expanded the space, studio, and green area, helping our team create a natural environment for work and creativity that suits our clients.",
     "gifAlt": "Shooting GIF Logo"
   },
   "services_2": {
@@ -99,9 +101,9 @@
     "ecommerce": "E-commerce",
     "photography_production": "Photography Production",
     "marketing_advertising": "Marketing Advertising",
-    "branding": "Branding",
-    "graphic_design": "Graphic Design",
-    "consulting": "Consulting",
+    "seo": "Seo",
+    "social_media": "Social media",
+    "industry_support": "Industry Support",
     "explore": "Explore",
     "highlight_brand": "Establish and highlight the brand identity to distinguish emerging companies and showcase their essence through a set of values, characteristics, and symbols that can give them a distinctive position in competition with other companies.",
     "start_project": "We start your project by entering our operating rooms, which are our special place consisting of several studio shoot rooms - the idea incubation room and the content room - and a team meeting room. From here, the project begins with artistic creativity."
@@ -203,5 +205,219 @@
       "description": "Description is required",
       "image": "Resume is required"
     }
+  },
+  "markting": {
+    "product_display": {
+      "description": "The art of presenting products or services in a way that attracts consumers to the goods or service...",
+      "marketing_title": "Marketing and Advertising",
+      "marketing_description": "Enhancing brand awareness and sales through well-thought-out strategies for providing comprehensive marketing and advertising services."
+    },
+    "strategy_planning": {
+      "title": "Strategic Planning",
+      "content": "Creating a comprehensive marketing plan based on market analysis, competitors, and identifying the target audience."
+    },
+    "ad_campaign_management": {
+      "title": "Ad Campaign Management",
+      "content": "Creating and managing ad campaigns online and via traditional media such as (TV, radio, and billboards)."
+    },
+    "ads": {
+      "title": "Pay-per-click Ads",
+      "description": "Managing (Google Ads) and social media campaigns to achieve the best return on investment."
+    },
+    "socialMediaMarketing": {
+      "title": "Social Media Marketing",
+      "description": "Developing and implementing strategies to increase engagement and reach across platforms like (Facebook, Instagram, Twitter), and others."
+    },
+    "contentMarketing": {
+      "title": "Content Marketing",
+      "description": "Creating engaging and relevant content for the target audience, including (articles, videos, and infographics)."
+    },
+    "performanceAnalysis": {
+      "title": "Performance Analysis and Reporting",
+      "description": "Tracking ad campaign performance and providing detailed analytical reports to help improve strategies."
+    },
+    "promotionsMarketing": {
+      "title": "Promotions and Contest Marketing",
+      "description": "Developing promotional campaigns and contests to increase engagement and brand exposure."
+    },
+    "emailMarketing": {
+      "title": "Email Marketing",
+      "description": "Designing and executing email marketing campaigns to send promotional messages and communicate with current and potential customers."
+    },
+    "influencerMarketing": {
+      "title": "Influencer Marketing",
+      "description": "Collaborating with influencers to create impactful marketing campaigns that directly target the audience."
+    },
+
+    "contact": {
+      "photo_video_request": "? Do you need photography or advertising or cinematic video production",
+      "consultation_offer": "Feel free to contact us for the necessary consultation",
+      "start_now": "Start now"
+    },
+    "passion_statement": "We work with passion... to hit the target.",
+    "what_we_offer": "What we offer you",
+    "brand_awareness": "We achieve mental awareness of your brand, providing world-class artistic and media works from a local perspective, and offering innovative and professional solutions to our various clients in the Saudi market and beyond.",
+    "strategy_planning_2": "Strategic Planning",
+    "ad_campaign_management_2": "Ad Campaign Management",
+    "ppc_ads": "Pay-Per-Click Ads",
+    "content_marketing": "Content Marketing",
+    "social_media_marketing": "Social Media Marketing",
+    "performance_analysis": "Performance Analysis and Reports",
+    "email_marketing": "Email Marketing",
+    "promotions_marketing": "Promotional Marketing and Contests",
+    "influencer_marketing": "Influencer Marketing"
+  },
+  "brands_projects": {
+    "build_brand": "Building the brand",
+    "and_programming": "and programming it that resonates with your audience!",
+    "establish_essence": "and establishing its essence...",
+    "develop_core": "Developing the core personality of the brand and its reputation with a deep understanding of the target audience to build trust, customer loyalty, and create a sense of familiarity and comfort.",
+    "mental_associations": "Through our previous experience in strength and knowledge, we can achieve mental associations through the concepts and emotions that are connected in the audience's mind.",
+    "we_work_passion": "We work with passion... to hit the target",
+    "what_we_offer": "What we offer you",
+    "distinguish_brand": "Distinguishing your brand from competitors, providing satisfactory services, and effective methods of achieving core elements of the brand are",
+    "brand_name": "Brand Name",
+    "brand_story": "Brand Story",
+    "brand_symbol": "Brand Symbol",
+    "brand_pattern": "Brand Pattern",
+    "brand_applications": "Brand Applications and Prints",
+    "graphic_design": "Brand Graphic Design",
+    "brand_guideline": "Brand Guideline",
+    "need_design": "? Do you need a design for your brand or want to develop your brand?",
+    "dont_hesitate": "Don’t hesitate to contact us for the necessary consultation.",
+    "start_now": "Start Now",
+    "our_projects": "Our work in brand identity"
+  },
+  "spatial_identity": {
+    "build": "Build",
+    "identity": "Spatial Identity",
+    "reflect": "that reflects your appearance to the audience!",
+    "enhance": "to enhance your presence...",
+    "create_solutions": "From 3D design to quality and professionalism of the exterior shape, we create innovative solutions in design, planning, and interior execution to bring your spatial brand to the eyes of its admirers.",
+    "reflect_mirror": "We can mirror the plan and reality to enhance the experience of presence, reinforce the values of presence, and draw the audience's attention to your spatial brand over others.",
+    "passionate_work": "We work passionately to hit the target.",
+    "what_we_offer": "What We Offer You",
+    "distinguish": "Distinguish your brand from its competitors by providing satisfactory services and effective means of achieving the essential elements of the brand.",
+    "exhibition_design": "Exhibition and booth design",
+    "restaurant_design": "Restaurant and cafe design",
+    "cart_design": "Cart design",
+    "theater_design": "Theater design",
+    "need_design": "? Do you need a 3D design for your identity",
+    "dont_hesitate": "Don't hesitate to contact us for the necessary consultation",
+    "start_now": "Start Now",
+    "our_projects": "Our work in spatial identity"
+  },
+  "websites_projects": {
+    "header_1": "Creating",
+    "header_2": "Online Stores and Websites",
+    "header_3": "and develop it",
+    "subheader": "We turn your ideas into a complete digital reality by building strong and fast e-commerce platforms",
+    "feature1": "Creating a unique digital experience that meets your needs and designing an attractive and user-friendly interface that aligns with the brand identity to meet customer expectations",
+    "feature2": "Building a comprehensive e-commerce platform that includes product management, payment systems, shipping settings, and providing technical support and regular maintenance to ensure high performance of the site",
+    "passion": "We work passionately... to hit the target",
+    "offer": "What we offer",
+    "description": "Linking the store or website to other systems such as Customer Relationship Management (CRM) systems, inventory systems, marketing tools, payment methods, shipping companies, and supporting your requirements through",
+    "clientRequirements": "Analyzing client requirements",
+    "designInterface": "User Interface Design",
+    "userExperience": "User Experience",
+    "storeDevelopment": "E-commerce Store Development",
+    "systemIntegration": "System Integration",
+    "seo": "Search Engine Optimization",
+    "dataSecurity": "Data Security",
+    "support": "Support and Maintenance",
+    "socialMedia": "Integration with Social Media",
+    "contactUs_1": "? Do you need to design or develop an online store or website ",
+    "contactUs_2": "Don't hesitate to contact us for the necessary consultation",
+    "startNow": "Start Now",
+    "our_projects": "Our business in stores and websites"
+  },
+  "seo_improve": {
+    "title": "Search Engine Optimization (SEO)",
+    "description": "Boost your site's visibility and enhance visitor engagement",
+    "onPage": {
+      "title": "On-Page SEO Optimization",
+      "content": "Improve internal elements like keywords, titles, and meta tags to enhance search engine ranking, while optimizing the site structure and user experience to boost search engine performance."
+    },
+    "offPage": {
+      "title": "Off-Page SEO Optimization",
+      "content": "Implement off-page strategies such as link building and improving online presence through promotional activities, managing online reputation, and optimizing it through various strategies."
+    },
+    "writingArticles": {
+      "title": "Writing Articles",
+      "content": "Craft relevant, engaging articles to help improve your site’s ranking on search engines. This includes researching keywords and ensuring content aligns with SEO best practices."
+    },
+    "passion_statement": "We work passionately... to hit the target",
+    "video_unavailable": "Your browser does not support the video tag.",
+    "offer_title": "What we offer you",
+    "offer_description": "We build a comprehensive strategy aimed at enhancing your site’s visibility and increasing visitor engagement with its content. We lay the fundamental pillars to ensure your website's effective and strong presence in search engine results.",
+    "in_depth_research": "In-depth Research and Analysis",
+    "strategic_planning": "Strategic Planning",
+    "content_optimization": "Content Optimization",
+    "technical_structure": "Technical Site Structure Optimization",
+    "link_building": "Link Building",
+    "user_experience": "User Experience (UX) Optimization",
+    "media_optimization": "Image and Media Optimization",
+    "site_speed": "Site Speed Optimization",
+    "local_seo": "Local SEO",
+    "mobile_seo": "Mobile SEO",
+    "backlink_analysis": "Backlink Analysis",
+    "google_core_vitals": "Compliance with Google Core Web Vitals",
+    "sitemap_optimization": "Sitemap Optimization",
+    "meta_tags_optimization": "Meta Tags Optimization",
+    "keyword_performance_monitoring": "Keyword Performance Monitoring",
+    "algorithm_updates": "Continuous Algorithm Updates",
+    "click_through_rate": "Click-Through Rate (CTR) Optimization",
+    "visitor_behavior": "Visitor Behavior Analysis",
+    "structured_data": "Structured Data Optimization",
+    "result_analysis": "Analysis of Optimization Results and Strategy Adjustments",
+    "contactUs_1": "? Do you need search engine optimization ",
+    "contactUs_2": "Don't hesitate to contact us for the necessary consultation",
+    "startNow": "Start Now"
+  },
+  "social_media": {
+    "management": "Social Media Management",
+    "cover_all_aspects": "We cover all aspects of your brand's digital presence across all social media platforms.",
+    "section_one": {
+      "title": "Audience Analysis and Suitable Platforms",
+      "description": "We begin by deeply understanding your target audience in terms of age group, interests, buying habits, and the places they spend their time. Then we identify the most effective platforms to engage with them."
+    },
+    "section_two": {
+      "title": "Social Media Marketing Strategy",
+      "description": "We develop a comprehensive strategy that suits your brand's goals, including content planning, where we create a detailed plan for the content we will publish, the appropriate times for posting, and the targeted platforms."
+    },
+    "section_three": {
+      "title": "Social Account Management",
+      "description": "Our team of specialists manages your accounts on social media platforms, focusing on creating inspiring and engaging content, as well as overseeing daily interactions with your audience. We strive to provide a unique experience for every follower, increasing brand loyalty."
+    },
+    "section_four": {
+      "title": "Content Creation",
+      "description": "We produce high-quality content suitable for each platform, whether it is images, videos, texts, or designs, to ensure that the content aligns with your brand identity and clearly and creatively expresses your message."
+    },
+    "section_five": {
+      "title": "Social Media Advertising",
+      "description": "We use targeted advertising to enhance your brand's visibility and attract new customers, providing tailored advertising campaigns designed to increase sales, engagement, and customer acquisition; with continuous performance optimization."
+    },
+    "section_six": {
+      "title": "Analysis and Reporting",
+      "description": "We provide periodic reports that include performance analysis on social media, including engagement rates, reach, growth, and return on investment, to evaluate the success of campaigns and adjust strategies to ensure goals are achieved."
+    },
+    "section_seven": {
+      "title": "Engagement and Community Management",
+      "description": "Engaging with followers is a vital part of our strategy. We monitor comments, messages, and responses on social media, and work to manage any issues or inquiries promptly and effectively; enhancing trust and credibility for the brand."
+    },
+    "passion_statement": "We work passionately... to hit the target.",
+    "offer_title": "What We Offer You",
+    "offer_description_1": "We believe in the importance of social media as a fundamental tool for the success of any business in the digital age.",
+    "offer_description_2": "We provide comprehensive services to manage and develop your presence on these platforms.",
+    "service_1": "Social Account Management",
+    "service_2": "Audience Analysis and Suitable Platforms",
+    "service_3": "Content Creation",
+    "service_4": "Social Media Advertising",
+    "service_5": "Social Media Marketing Strategy",
+    "service_6": "Analysis and Reporting",
+    "service_7": "Engagement and Community Management",
+    "contactUs_1": "? Need social media management",
+    "contactUs_2": "Feel free to contact us for the necessary consultation",
+    "startNow": "Start Now"
   }
 }

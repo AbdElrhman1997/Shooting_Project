@@ -32,7 +32,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           className={`px-4 text-2xl ${
             currentPage === page
               ? "text-white bg-main w-10 h-10 rounded-full flex justify-center items-center" // Highlight the current page
-              : ""
+              : "text-black"
           } rounded`}
         >
           {page}

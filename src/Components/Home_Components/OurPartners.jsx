@@ -1,63 +1,64 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-import Logos_01 from "../../assets/Images/PartnersLogos/Services_Images-1.webp";
-import Logos_02 from "../../assets/Images/PartnersLogos/Services_Images-2.webp";
-import Logos_03 from "../../assets/Images/PartnersLogos/Services_Images-3.webp";
-import Logos_04 from "../../assets/Images/PartnersLogos/Services_Images-4.webp";
-import Logos_05 from "../../assets/Images/PartnersLogos/Services_Images-5.webp";
-import Logos_06 from "../../assets/Images/PartnersLogos/Services_Images-6.webp";
-import Logos_07 from "../../assets/Images/PartnersLogos/Services_Images-7.webp";
-import Logos_08 from "../../assets/Images/PartnersLogos/Services_Images-8.webp";
-import Logos_09 from "../../assets/Images/PartnersLogos/Services_Images-9.webp";
+import "swiper/css/navigation";
 import arrow_left from "../../assets/Images/Icons/arrow_left.svg";
 import arrow_right from "../../assets/Images/Icons/arrow_right.svg";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const OurPartners = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [logos_images, set_logos_images] = useState([]);
+  const fetchServices = async () => {
+    try {
+      const response = await axios.get(
+        `https://admin.shootingads.net/api/getPartnerApi`,
+        {
+          params: { currentPage: 1, per_page: 12 },
+        }
+      );
+      const { data } = response.data;
+      set_logos_images(data);
+    } catch (error) {
+      console.error("Error fetching posts", error);
+    } finally {
+      // setLoading(false);
+    }
+  };
 
-  const slider_images = [
-    { id: 1, image: Logos_01 },
-    { id: 2, image: Logos_02 },
-    { id: 3, image: Logos_03 },
-    { id: 4, image: Logos_04 },
-    { id: 5, image: Logos_05 },
-    { id: 6, image: Logos_06 },
-    { id: 7, image: Logos_07 },
-    { id: 8, image: Logos_08 },
-    { id: 9, image: Logos_09 },
-  ];
+  useEffect(() => {
+    fetchServices();
+  }, []);
 
   return (
     <section className="bg-white overflow-x-hidden" dir="ltr">
-      <p className="text-black border-b-[#ec3237] border-b-[3px] w-fit mx-auto pb-4 xl:text-5xl lg:text-5xl md:text-5xl text-3xl font-bold xl:mt-32 lg:mt-32 mt-10">
+      <p className="text-black border-b-[#ec3237] border-b-[3px] w-fit mx-auto pb-4 xl:text-5xl lg:text-5xl md:text-5xl text-3xl font-bold xl:mt-24 lg:mt-24 mt-10">
         {t("partners.title")}
       </p>
-      <div className="relative flex justify-between items-center">
-        <div
-          className="custom-next-arrow z-10 cursor-pointer p-4"
-          id="custom-prev"
-        >
+      <div className="relative flex justify-between items-center 2xl:my-16 xl:my-16 lg:my-16 md:my-16 my-8">
+        <div className="custom-prev-arrow-2 z-10 cursor-pointer p-4">
           <img
             src={arrow_left}
             alt=""
-            className="xl:w-[200px] lg:w-[200px] md:w-[200px] sm:w-[160px] w-[120px] opacity-70 hover:opacity-100"
+            className="xl:w-[170px] lg:w-[170px] md:w-[170px] sm:w-[160px] w-[120px] opacity-70 hover:opacity-100"
           />
         </div>
         <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          spaceBetween={50}
           breakpoints={{
             1280: {
               slidesPerView: 4,
-              centeredSlides: false,
               spaceBetween: 20,
+              centeredSlides: false,
             },
             1024: {
               slidesPerView: 3,
-              centeredSlides: false,
               spaceBetween: 20,
+              centeredSlides: false,
             },
             768: {
               slidesPerView: 2,
@@ -66,19 +67,18 @@ const OurPartners = () => {
               slidesPerView: 1,
             },
           }}
-          navigation={{
-            prevEl: "#custom-prev",
-            nextEl: "#custom-next",
-          }}
-          modules={[Autoplay, Pagination, Navigation]}
+          onSwiper={(swiper) => console.log(swiper)}
           className="mySwiper xl:w-3/4 lg:w-3/4 w-3/4 mx-auto"
-          loop={true}
+          navigation={{
+            prevEl: ".custom-prev-arrow-2",
+            nextEl: ".custom-next-arrow-2",
+          }}
         >
-          {slider_images.map((item) => {
+          {logos_images.map((item) => {
             return (
               <SwiperSlide key={item.id} className="">
                 <img
-                  src={item.image}
+                  src={`https://admin.shootingads.net/images/${item?.image}`}
                   alt={`Logo ${item.id}`}
                   className="xl:mb-0 lg:mb-0 md:mb-2 mb-6"
                 />
@@ -86,20 +86,20 @@ const OurPartners = () => {
             );
           })}
         </Swiper>
-        <div
-          className="custom-next-arrow z-10 cursor-pointer p-4"
-          id="custom-next"
-        >
+        <div className="custom-next-arrow-2 z-10 cursor-pointer p-4">
           <img
             src={arrow_right}
             alt=""
-            className="xl:w-[200px] lg:w-[200px] md:w-[200px] sm:w-[160px] w-[120px] opacity-70 hover:opacity-100"
+            className="xl:w-[170px] lg:w-[170px] md:w-[170px] sm:w-[160px] w-[120px] opacity-70 hover:opacity-100"
           />
         </div>
       </div>
-      <div className="rounded-full bg-[#ec3237] w-fit px-24 py-[12px] font-bold xl:text-xl lg:text-xl md:text-xl text-md mx-auto mb-16">
+      <Link
+        to={`/${i18n.language}/our_projects`}
+        className="rounded-full block bg-[#ec3237] w-fit px-24 py-[12px] font-bold xl:text-xl lg:text-xl md:text-xl text-md mx-auto mb-16"
+      >
         {t("partners.discoverClients")}
-      </div>
+      </Link>
     </section>
   );
 };

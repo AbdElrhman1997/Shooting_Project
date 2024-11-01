@@ -36,167 +36,142 @@ const Brands_Projects = () => {
   }, []);
 
   return (
-    <section>
+    <section dir={i18n.language === "ar" ? "rtl" : "ltr"}>
       <GeneralFrame
         content={
-          <div className="bg-white text-black rounded-[10px]  py-12" dir="rtl">
-            <div className="">
+          <div
+            className={`bg-white text-black rounded-[10px]  py-12 text-center  ${
+              i18n.language === "ar"
+                ? "2xl:text-right xl:text-right lg:text-right md:text-right"
+                : "2xl:text-left xl:text-left lg:text-left md:text-left"
+            }`}
+            dir={i18n.language === "ar" ? "rtl" : "ltr"}
+          >
+            <div>
               <div className="bg-white">
-                <p className="2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl text-xl font-bold 2xl:px-12 xl:px-12 lg:px-12 md:px-8 px-4 2xl:text-right xl:text-right lg:text-right md:text-right text-center">
-                  بناء{" "}
-                  <span className="2xl:text-[42px] xl:text-[42px]lg:text-[42px] md:text-[42px] text-3xl">
-                    العلامة التجارية
+                <p className="2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl text-xl font-bold 2xl:px-12 xl:px-12 lg:px-12 md:px-8 px-4 ">
+                  {t("brands_projects.build_brand")}{" "}
+                  <span className="2xl:text-[42px] xl:text-[42px] lg:text-[42px] md:text-[42px] text-3xl">
+                    {t("brands_projects.brand_name")}
                   </span>{" "}
-                  وبرمجتها التي يتردد صداها مع جمهورك !
+                  {t("brands_projects.and_programming")}
                 </p>
-                <p className="2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl text-xl mt-3 font-bold 2xl:px-12 xl:px-12 lg:px-12 md:px-8 px-4 2xl:text-right xl:text-right lg:text-right md:text-right text-center">
-                  وتأسيس جوهرها...
+                <p className="2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl text-xl mt-3 font-bold 2xl:px-12 xl:px-12 lg:px-12 md:px-8 px-4 ">
+                  {t("brands_projects.establish_essence")}
                 </p>
                 <div className="bg-white flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row flex-col font-bold items-center w-full rounded-[30px] 2xl:mt-12 xl:mt-12 lg:mt-12 md:mt-12 mt-0">
-                  <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-16 xl:px-16 lg:px-8 ">
-                    <p className="text-justify my-6 mt-4 2xl:text-2xl xl:text-2xl lg:text-lg md:text-base text-lg leading-loose font-bold 2xl:mx-0 xl:mx-0 lg:mx-0  mx-4">
-                      تطوير جوهر شخصية العلامة التجارية وسمعتها بفهم عميق
-                      للجمهور المستهدف لبناء الثقة وولاء العملاء وخلق إحساس
-                      بالألفة والراحة
+                  <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-16 xl:px-16 lg:px-8">
+                    <p className="text-justify my-6 mt-4 2xl:text-2xl xl:text-2xl lg:text-lg md:text-base text-lg leading-loose font-bold 2xl:mx-0 xl:mx-0 lg:mx-0 mx-4">
+                      {t("brands_projects.develop_core")}
                     </p>
                   </div>
-                  <div className=" 2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-0 xl:px-0 lg:px-0 md:px-0 px-4  2xl:block xl:block lg:block md:block inline">
+                  <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-0 xl:px-0 lg:px-0 md:px-0 px-4 2xl:block xl:block lg:block md:block inline">
                     <img
                       src={top_section_1}
-                      alt={""}
-                      className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" // Added group-hover
+                      alt=""
+                      className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
                     />
                   </div>
                 </div>
-                <div className="bg-white flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row flex-col font-bold items-center w-f rounded-[30px]">
-                  <div className=" 2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-0 xl:px-0 lg:px-0 md:px-0 px-4  2xl:block xl:block lg:block md:block hidden">
+                <div className="bg-white flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row flex-col font-bold items-center w-full rounded-[30px]">
+                  <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-0 xl:px-0 lg:px-0 md:px-0 px-4 2xl:block xl:block lg:block md:block hidden">
                     <img
                       src={top_section_2}
-                      alt={""}
-                      className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" // Added group-hover
+                      alt=""
+                      className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
                     />
                   </div>
-                  <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-16 xl:px-16 lg:px-8  ">
-                    <p className="text-justify my-6 mt-4 2xl:text-2xl xl:text-2xl lg:text-lg md:text-base text-lg leading-loose font-bold  2xl:mx-0 xl:mx-0 lg:mx-0  mx-4">
-                      من خلال خبرتنا السابقة في القوة والمعرفة يمكننا تحقيق
-                      الارتباطات الذهنية من خلال المفاهيم والمشاعر التي ترتبط في
-                      ذهن الجمهور
+                  <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-16 xl:px-8">
+                    <p className="text-justify my-6 mt-4 2xl:text-2xl xl:text-2xl lg:text-lg md:text-base text-lg leading-loose font-bold 2xl:mx-0 xl:mx-0 lg:mx-0 mx-4">
+                      {t("brands_projects.mental_associations")}
                     </p>
                   </div>
-                  <div className=" 2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-0 xl:px-0 lg:px-0 md:px-0 px-4  2xl:hidden xl:hidden lg:hidden md:hidden inline">
+                  <div className="2xl:w-1/2 xl:w-1/2 lg:w-1/2 w-full 2xl:px-0 xl:px-0 lg:px-0 md:px-0 px-4 2xl:hidden xl:hidden lg:hidden md:hidden inline">
                     <img
                       src={top_section_2}
-                      alt={""}
-                      className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" // Added group-hover
+                      alt=""
+                      className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
                     />
                   </div>
                 </div>
               </div>
             </div>
-            <p className="text-black text-center font-bold mt-10 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl text-xl ">
-              نعمل بشغف . . لنصيب الهدف
+            <p className="text-black text-center font-bold mt-10 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl text-xl">
+              {t("brands_projects.we_work_passion")}
             </p>
             <div className="2xl:mx-12 xl:mx-12 lg:mx-12 md:mx-6 mx-2 my-10">
-              <video controls className="w-full rounded-lg shadow-lg ">
+              <video controls className="w-full rounded-lg shadow-lg">
                 <source src="/path-to-your-video/video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
             <p className="text-[#000] font-bold 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-4xl text-3xl text-center mt-8">
-              ما نقدمة لكم
+              {t("brands_projects.what_we_offer")}
             </p>
             <p className="text-[#000] text-center font-bold mt-2 2xl:text-xl xl:text-xl lg:text-xl md:text-xl text-lg 2xl:mx-12 xl:mx-12 lg:mx-12 md:mx-6 mx-2">
-              تمييز علامتك التجارية عن منافسيها تقديم خدمات مرضية وطرق تحقيق
-              فعالة احتراف العناصر الأساسية للعلامة التجارية وهي
+              {t("brands_projects.distinguish_brand")}
             </p>
             <div className="grid grid-cols-12 gap-y-12 my-10 mx-4 text-center 2xl:text-xl xl:text-xl lg:text-xl md:text-xl text-lg">
               <div className="flex flex-col justify-center items-center 2xl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-6 col-span-12 mx-auto">
-                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8 "></div>
+                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8"></div>
                 <p className="font-bold my-1 text-[#000]">
-                  اسم العلامة التجارية
+                  {t("brands_projects.brand_name")}
                 </p>
               </div>
               <div className="flex flex-col justify-center items-center 2xl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-6 col-span-12 mx-auto">
-                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8 "></div>
+                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8"></div>
                 <p className="font-bold my-1 text-[#000]">
-                  قصة العلامة التجارية
+                  {t("brands_projects.brand_story")}
                 </p>
               </div>
               <div className="flex flex-col justify-center items-center 2xl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-6 col-span-12 mx-auto">
-                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8 "></div>
+                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8"></div>
                 <p className="font-bold my-1 text-[#000]">
-                  رمز العلامة التجارية
+                  {t("brands_projects.brand_symbol")}
                 </p>
               </div>
               <div className="flex flex-col justify-center items-center 2xl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-6 col-span-12 mx-auto">
-                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8 "></div>
+                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8"></div>
                 <p className="font-bold my-1 text-[#000]">
-                  نقشة العلامة التجارية
+                  {t("brands_projects.brand_pattern")}
                 </p>
               </div>
               <div className="flex flex-col justify-center items-center 2xl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-6 col-span-12 mx-auto">
-                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8 "></div>
+                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8"></div>
                 <p className="font-bold my-1 text-[#000]">
-                  تطبيقات ومطبوعات العلامة التجارية
+                  {t("brands_projects.brand_applications")}
                 </p>
               </div>
               <div className="flex flex-col justify-center items-center 2xl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-6 col-span-12 mx-auto">
-                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8 "></div>
+                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8"></div>
                 <p className="font-bold my-1 text-[#000]">
-                  التصميم الجرافيكي للعلامة التجارية
+                  {t("brands_projects.graphic_design")}
                 </p>
               </div>
               <div className="flex flex-col justify-center items-center col-span-12 mx-auto">
-                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8 "></div>
+                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8"></div>
                 <p className="font-bold my-1 text-[#000]">
-                  الملف التوجيهي للعلامة التجارية
+                  {t("brands_projects.brand_guideline")}
                 </p>
               </div>
-              {/* <div className="flex flex-col justify-center items-center 2xl:col-span-6 xl:col-span-6 lg:col-span-6 md:col-span-6 col-span-12 mx-auto">
-                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8 "></div>
-                <p className="font-bold my-1 text-[#000]"></p>
-              </div>
-
-              <div className="flex flex-col justify-center items-center 2xl:col-span-6 xl:col-span-6 lg:col-span-6 md:col-span-6 col-span-12 mx-auto">
-                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8 "></div>
-                <p className="font-bold my-1 text-[#000]"></p>
-              </div>
-              <div className="flex flex-col justify-center items-center 2xl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-6 col-span-12 mx-auto">
-                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8 "></div>
-                <p className="font-bold my-1 text-[#000]"></p>
-              </div>
-              <div className="2xl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-6 col-span-12 2xl:block xl:block lg:block md:block hidden "></div>
-              <div className="flex flex-col justify-center items-center 2xl:col-span-4 xl:col-span-4 lg:col-span-4 md:col-span-6 col-span-12 mx-auto">
-                <div className="border-[1.5px] border-[#000] rounded-full w-8 h-8 "></div>
-                <p className="font-bold my-1 text-[#000]">
-                  
-                </p>
-              </div> */}
             </div>
             <div
               className="bg-[#333] xl:py-8 lg:py-8 md:py-8 pt-4 pb-8 xl:px-16 lg:px-16 md:px-8 px-4 text-white 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl text-lg font-bold"
               dir="rtl"
             >
-              <p>
-                تحتاج تصميم لعلامتك التجارية أو تريد تطوير علامتك التجارية ؟
-              </p>
-              <p className="my-2">
-                لا تتردد في التواصل معنا لتقديم الإستشارة اللازمة
-              </p>
+              <p>{t("brands_projects.need_design")}</p>
+              <p className="my-2">{t("brands_projects.dont_hesitate")}</p>
             </div>
             <div className="text-white bg-[#ec3237] w-fit px-8 py-2 font-bold xl:text-xl lg:text-xl md:text-xl text-md mx-auto -mt-[22px]">
-              إبدأ الان
+              {t("brands_projects.start_now")}
             </div>
           </div>
         }
       />
       <p className="text-black text-center font-bold mt-10 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-3xl text-xl ">
-        أعمالنا في الهوية التجارية
+        {t("brands_projects.our_projects")}
       </p>
-      <div
-        className="grid grid-cols-6 xl:px-16 lg:px-16 md:px-8 px-4 gap-4 my-8"
-        dir="rtl"
-      >
+      <div className="grid grid-cols-6 xl:px-16 lg:px-16 md:px-8 px-4 gap-4 my-8">
         {Services?.map((item, index) => {
           return (
             <Link
@@ -228,7 +203,13 @@ const Brands_Projects = () => {
           );
         })}
       </div>
-      <img src={GIF_Logo} alt="Shooting GIF Logo" className="mt-6 -mb-6" />
+      <div className="w-full h-full flex justify-center items-center ">
+        <img
+          src={GIF_Logo}
+          alt="Shooting GIF Logo"
+          className="xl:w-48 lg:w-48 md:w-48 w-40 xl:-mb-12 lg:-mb-12 md:-mb-12 -mb-[120px] xl:mt-12 lg:mt-12 md:mt-12 mt-12   "
+        />
+      </div>
     </section>
   );
 };

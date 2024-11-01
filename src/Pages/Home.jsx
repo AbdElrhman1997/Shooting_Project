@@ -19,7 +19,13 @@ const Home = () => {
       <OurJourney />
       <OurPartners />
       <Shooting_Team />
-      <img src={GIF_Logo} alt="Shooting GIF Logo" className="mt-6 -mb-6" />
+      <div className="w-full h-full flex justify-center items-center ">
+        <img
+          src={GIF_Logo}
+          alt="Shooting GIF Logo"
+          className="xl:w-48 lg:w-48 md:w-48 w-40 xl:-mb-12 lg:-mb-12 md:-mb-12 -mb-[120px] xl:mt-12 lg:mt-12 md:mt-12 mt-12   "
+        />
+      </div>
     </main>
   );
 };

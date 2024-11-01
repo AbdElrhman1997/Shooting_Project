@@ -5,7 +5,8 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import { Helmet } from "react-helmet";
 import "./index.css";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const App = () => {
   const { lang } = useParams();
   const { i18n } = useTranslation();
@@ -23,10 +24,10 @@ const App = () => {
     }
   }, [lang, i18n, navigate]);
 
-  const hiddenHeaderFooterRoutes = [];
+  const hiddenHeaderFooterRoutes = ["single_service"];
 
   const isHiddenRoute = hiddenHeaderFooterRoutes.some((route) =>
-    location.pathname.startsWith(route)
+    location.pathname.includes(route)
   );
 
   return (
@@ -34,6 +35,7 @@ const App = () => {
       className="relative overflow-hidden"
       style={{ backgroundColor: "white" }}
     >
+      <ToastContainer />
       <Helmet></Helmet>
       {!isHiddenRoute && <Header />}
       <Outlet />

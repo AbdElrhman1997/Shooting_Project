@@ -50,8 +50,8 @@ const OurJourney = () => {
             <Swiper
               slidesPerView={1}
               navigation={{
-                prevEl: "#custom-prev",
-                nextEl: "#custom-next",
+                prevEl: "#custom-prev_1",
+                nextEl: "#custom-next_1",
               }}
               spaceBetween={50}
               pagination={{

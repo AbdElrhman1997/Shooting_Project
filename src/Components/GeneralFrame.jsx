@@ -3,6 +3,7 @@ import {
   FaInstagram,
   FaSnapchat,
   FaTiktok,
+  FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
 
@@ -15,7 +16,7 @@ const GeneralFrame = (params) => {
             <div
               className="bg-white w-full h-full rounded-tr-[100px] 2xl:rounded-bl-[15px] xl:rounded-bl-[30px] lg:rounded-bl-[30px] md:rounded-bl-[30px] rounded-bl-[35px]"
               style={{
-                borderBottom: "2px solid black",
+                borderBottom: "1px solid black",
               }}
             ></div>
           </div>
@@ -23,7 +24,7 @@ const GeneralFrame = (params) => {
             <div
               className="bg-white w-full h-full 2xl:rounded-bl-[15px] xl:rounded-bl-[12px] lg:rounded-bl-[12px] md:rounded-bl-[12px] rounded-bl-[12px] 2xl:rounded-br-[15px] xl:rounded-br-[12px] lg:rounded-br-[12px] md:rounded-br-[12px] rounded-br-[12px]"
               style={{
-                border: "2px solid black",
+                border: "1px solid black",
                 borderTop: "none",
               }}
             ></div>
@@ -32,7 +33,7 @@ const GeneralFrame = (params) => {
             <div
               className="bg-white w-full h-full rounded-tl-[100px] 2xl:rounded-br-[15px] xl:rounded-br-[32px] lg:rounded-br-[32px] md:rounded-br-[30px] rounded-br-[35px]"
               style={{
-                borderBottom: "2px solid black",
+                borderBottom: "1px solid black",
               }}
             ></div>
           </div>
@@ -44,7 +45,7 @@ const GeneralFrame = (params) => {
             <div
               className="bg-white w-full h-full 2xl:rounded-bl-[10px] xl:rounded-bl-[12px] lg:rounded-bl-[11px] md:rounded-bl-[11px] rounded-bl-[12px] 2xl:rounded-tl-[15px] xl:rounded-tl-[10px] lg:rounded-tl-[10px] md:rounded-tl-[10px] rounded-tl-[10px]"
               style={{
-                borderBottom: "2px solid black",
+                borderBottom: "1px solid black",
               }}
             ></div>
           </div>
@@ -52,7 +53,7 @@ const GeneralFrame = (params) => {
             className=" w-full bg-[#000] text-black"
             style={{
               borderRadius: "10px",
-              border: "2px solid black",
+              border: "1px solid black",
               borderTop: "none",
             }}
           >
@@ -62,7 +63,7 @@ const GeneralFrame = (params) => {
             <div
               className="bg-white w-full h-full 2xl:rounded-tr-[10px] xl:rounded-tr-[10px] lg:rounded-tr-[10px] md:rounded-tr-[10px] rounded-tr-[10px] 2xl:rounded-br-[11px] xl:rounded-br-[11px] lg:rounded-br-[11px] md:rounded-br-[11px] rounded-br-[12px]"
               style={{
-                borderBottom: "2px solid black",
+                borderBottom: "1px solid black",
               }}
             ></div>
           </div>
@@ -75,7 +76,7 @@ const GeneralFrame = (params) => {
               <div
                 className="bg-white w-full h-full 2xl:rounded-bl-[11px] xl:rounded-bl-[11px] lg:rounded-bl-[11px] md:rounded-bl-[11px] rounded-bl-[11px] 2xl:rounded-tl-[11px] xl:rounded-tl-[11px] lg:rounded-tl-[11px] md:rounded-tl-[11px] rounded-tl-[11px]"
                 style={{
-                  borderBottom: "2px solid black",
+                  borderBottom: "1px solid black",
                 }}
               ></div>
             </div>
@@ -83,49 +84,54 @@ const GeneralFrame = (params) => {
               <div
                 className="bg-white w-full h-full 2xl:rounded-[10px] xl:rounded-[11px] lg:rounded-[10px] md:rounded-[10px] rounded-[10px]"
                 style={{
-                  border: "2px solid black",
+                  border: "1px solid black",
                   borderTop: "none",
                   padding: "0 20px",
                 }}
               >
                 <div
                   className="flex justify-center items-center gap-x-6 text-[#000] h-full"
-                  dir="ltr"
+                  dir="rtl"
                 >
                   <a
-                    href=""
+                    href="https://wa.me/966555992584"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="border-2 border-[#000] rounded-full p-1 mt-1"
                   >
-                    <FaFacebookF className="font-bold text-lg" />
+                    <FaWhatsapp className="font-bold text-lg" />
                   </a>
                   <a
-                    href=""
+                    href="https://twitter.com/Shooting_agancy"
                     target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-2 border-[#000] rounded-full p-1 mt-1"
+                  >
+                    <FaTwitter className="font-bold text-lg" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/shooting.agency"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="border-2 border-[#000] rounded-full p-1 mt-1"
                   >
                     <FaInstagram className="font-bold text-lg" />
                   </a>
                   <a
-                    href=""
+                    href="https://www.snapchat.com/add/shooting.ads"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="border-2 border-[#000] rounded-full p-1 mt-1"
                   >
                     <FaSnapchat className="font-bold text-lg" />
                   </a>
                   <a
-                    href=""
+                    href="https://www.tiktok.com/@shooting.agency"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="border-2 border-[#000] rounded-full p-1 mt-1"
                   >
                     <FaTiktok className="font-bold text-lg" />
-                  </a>
-                  <a
-                    href=""
-                    target="_blank"
-                    className="border-2 border-[#000] rounded-full p-1 mt-1"
-                  >
-                    <FaWhatsapp className="font-bold text-lg" />
                   </a>
                 </div>
               </div>
@@ -134,7 +140,7 @@ const GeneralFrame = (params) => {
               <div
                 className="bg-white w-full h-full 2xl:rounded-br-[11px] xl:rounded-br-[11px] lg:rounded-br-[11px] md:rounded-br-[11px] rounded-br-[11px] 2xl:rounded-tr-[11px] xl:rounded-tr-[11px] lg:rounded-tr-[11px] md:rounded-tr-[11px] rounded-tr-[10px]"
                 style={{
-                  borderBottom: "2px solid black",
+                  borderBottom: "1px solid black",
                 }}
               ></div>
             </div>

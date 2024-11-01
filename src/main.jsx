@@ -22,6 +22,13 @@ import Markting from "./Pages/Markting";
 import Services from "./Pages/Services";
 import Industry from "./Pages/Industry";
 import Employment from "./Pages/Employment";
+import SeoImprove from "./Pages/SeoImprove";
+import SocialMedia from "./Pages/SocialMedia";
+import Photos_Projects from "./Pages/Photos_Projects";
+import RegisterNow from "./Pages/RegisterNow";
+import Printing from "./Pages/Printing";
+import Perfumes from "./Pages/Perfumes";
+import Clothes from "./Pages/Clothes";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -39,14 +46,21 @@ const AppRoutes = () => {
         <Route path="about_us" element={<AboutUs />} />
         <Route path="our_clients" element={<OurClients />} />
         <Route path="our_projects" element={<OurProjects />} />
+        <Route path="photos_projects" element={<Photos_Projects />} />
         <Route path="services" element={<Services />} />
         <Route path="employment" element={<Employment />} />
         <Route path="industry" element={<Industry />} />
+        <Route path="seo" element={<SeoImprove />} />
+        <Route path="social_media" element={<SocialMedia />} />
         <Route path="spatial_identity" element={<Spatial_Identity />} />
         <Route path="websites_projects" element={<Websites_Projects />} />
         <Route path="brands_projects" element={<Brands_Projects />} />
         <Route path="markting" element={<Markting />} />
-        <Route path="services/:id" element={<Single_Service />} />
+        <Route path="printing" element={<Printing />} />
+        <Route path="perfumes" element={<Perfumes />} />
+        <Route path="clothes" element={<Clothes />} />
+        <Route path="register_now" element={<RegisterNow />} />
+        <Route path="single_service/:id" element={<Single_Service />} />
       </Route>
 
       {/* If unsupported language is used, redirect to /ar */}

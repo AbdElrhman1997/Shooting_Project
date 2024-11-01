@@ -7,6 +7,9 @@ import { useState } from "react";
 import { ErrorMessage, Field, Form, Formik, useFormik } from "formik";
 import { IoFileTrayOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next"; // Import translation hook
+import { toast } from "react-toastify";
+import { Navigate } from "react-router-dom";
+import axios from "axios";
 
 const Employment = () => {
   const { t, i18n } = useTranslation(); // Initialize translation
@@ -50,6 +53,32 @@ const Employment = () => {
     },
   });
 
+  const onSubmit = (values, { setSubmitting, resetForm }) => {
+    axios
+      .post(
+        `https://admin.shootingads.net/api/userRegisterStore`,
+        { ...values, service_provider_id: values?.service_provider_id?.value },
+        {
+          headers: {
+            "Accept-Language": i18n.language,
+          },
+        }
+      )
+      .then((response) => {
+        console.log(response);
+        toast.success(t("contact_validation.success_message"));
+        resetForm();
+        Navigate(`/`);
+      })
+      .catch((error) => {
+        console.error("There was an error login!", error);
+        toast.error(t("error.registrationFailed"));
+      })
+      .finally(() => {
+        setSubmitting(false);
+      });
+  };
+
   return (
     <section>
       <GeneralFrame
@@ -63,7 +92,10 @@ const Employment = () => {
             dir={i18n.language === "ar" ? "rtl" : "ltr"}
           >
             <div className="">
-              <div className="bg-white">
+              <div
+                className="bg-white"
+                style={{ backgroundColor: "white !important" }}
+              >
                 <p className="2xl:text-3xl xl:text-3xl lg:text-2xl md:text-xl text-lg font-bold 2xl:px-12 xl:px-12 lg:px-12 md:px-8 px-4 mb-5">
                   {t("employment.welcome.message")}
                 </p>
@@ -103,15 +135,10 @@ const Employment = () => {
                     name: "",
                     email: "",
                     phone: "",
-                    address: "",
-                    description: "",
-                    image: null,
+                    message: "",
                   }}
                   validationSchema={validationSchema}
-                  onSubmit={(values) => {
-                    values.image = imageFile;
-                    console.log(values);
-                  }}
+                  onSubmit={onSubmit}
                 >
                   {({ setFieldValue }) => (
                     <Form className="2xl:px-16 xl:px-16 lg:px-8 px-4 py-8 2xl:gap-8 xl:gap-8 lg:gap-8 gap-y-8 gap-x-0 grid grid-cols-12 font-semibold text-black">
@@ -123,7 +150,7 @@ const Employment = () => {
                             name="name"
                             placeholder={t("employment.form.name.placeholder")}
                             type="text"
-                            className="border-[1.5px] p-2 w-full border-gray-300 placeholder:text-gray-500"
+                            className="border-[1.5px] p-2 w-full border-gray-300 placeholder:text-gray-500 bg-white"
                           />
                           <ErrorMessage
                             name="name"
@@ -139,7 +166,7 @@ const Employment = () => {
                             name="email"
                             type="email"
                             placeholder={t("employment.form.email.placeholder")}
-                            className="border-[1.5px] p-2 w-full border-gray-300 placeholder:text-gray-500"
+                            className="border-[1.5px] p-2 w-full border-gray-300 placeholder:text-gray-500 bg-white"
                           />
                           <ErrorMessage
                             name="email"
@@ -156,7 +183,7 @@ const Employment = () => {
                             placeholder={t(
                               "employment.form.address.placeholder"
                             )}
-                            className="border-[1.5px] border-gray-300 p-2 w-full placeholder:text-gray-500"
+                            className="border-[1.5px] border-gray-300 p-2 w-full placeholder:text-gray-500 bg-white"
                           />
                           <ErrorMessage
                             name="address"
@@ -205,7 +232,7 @@ const Employment = () => {
                             name="phone"
                             type="text"
                             placeholder={t("employment.form.phone.placeholder")}
-                            className="border-[1.5px] p-2 w-full border-gray-300 placeholder:text-gray-500"
+                            className="border-[1.5px] p-2 w-full border-gray-300 placeholder:text-gray-500 bg-white"
                           />
                           <ErrorMessage
                             name="phone"
@@ -224,7 +251,7 @@ const Employment = () => {
                             placeholder={t(
                               "employment.form.description.placeholder"
                             )}
-                            className="border-[1.5px] border-gray-300 p-2 w-full placeholder:text-gray-500"
+                            className="border-[1.5px] border-gray-300 p-2 w-full placeholder:text-gray-500 bg-white"
                           />
                           <ErrorMessage
                             name="description"
@@ -250,7 +277,14 @@ const Employment = () => {
           </div>
         }
       />
-      <img src={GIF_Logo} alt="Shooting GIF Logo" className="mt-6 -mb-6" />
+
+      <div className="w-full h-full flex justify-center items-center ">
+        <img
+          src={GIF_Logo}
+          alt="Shooting GIF Logo"
+          className="xl:w-48 lg:w-48 md:w-48 w-40 xl:-mb-12 lg:-mb-12 md:-mb-12 -mb-[120px] xl:mt-12 lg:mt-12 md:mt-12 mt-12   "
+        />
+      </div>
     </section>
   );
 };

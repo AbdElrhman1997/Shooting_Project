@@ -12,6 +12,7 @@ import bottom_frame from "../assets/Images/bottom_frame.png";
 import GIF_Logo from "../assets/Images/Icons/GIF_Logo.gif";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
 const Industry = () => {
   const { i18n, t } = useTranslation();
@@ -48,7 +49,7 @@ const Industry = () => {
                 </div>
                 <div className="grid grid-cols-12 2xl:gap-x-8 xl:gap-x-8 2xl:px-16 xl:px-16 lg:px-8 gap-y-32 px-4 mt-16">
                   <Link
-                    to={"/brands_projects"}
+                    to={`/${i18n.language}/printing`}
                     className=" relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto hover:opacity-90"
                   >
                     <img
@@ -58,23 +59,30 @@ const Industry = () => {
                     <p className="text-2xl font-bold leading-[1.6]">
                       {t("industry.printing")}
                     </p>
-                    <p className=" font-bold text-[#000] my-2">
+                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
                       {t("industry.explore")}
+                      {i18n.language == "en" ? (
+                        <BsArrowRightCircleFill />
+                      ) : (
+                        <BsArrowLeftCircleFill />
+                      )}
                     </p>
                     <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-white rounded-full border-[8px] border-black">
                       <img src={icon_1} alt="icon_1" className="w-16" />
                     </div>
                   </Link>
-                  <Link
-                    to={"/spatial_identity"}
-                    className="relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto"
-                  >
+                  <Link className="relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto">
                     <img
                       src={bottom_frame}
                       className=" -bottom-8 absolute 2xl:w-[290px] xl:w-[290px] w-[320px] img"
                     />
-                    <p className=" font-bold text-[#000] my-1">
+                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
                       {t("industry.explore")}
+                      {i18n.language == "en" ? (
+                        <BsArrowRightCircleFill />
+                      ) : (
+                        <BsArrowLeftCircleFill />
+                      )}
                     </p>
                     <p className="text-2xl font-bold leading-[1.2]">
                       {t("industry.exhibitions")}
@@ -84,7 +92,7 @@ const Industry = () => {
                     </div>
                   </Link>
                   <Link
-                    to={"/websites_projects"}
+                    to={`/${i18n.language}/perfumes`}
                     className=" relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto hover:opacity-90"
                   >
                     <img
@@ -94,20 +102,33 @@ const Industry = () => {
                     <p className="text-2xl font-bold leading-[1.3]">
                       {t("industry.events")}
                     </p>
-                    <p className=" font-bold text-[#000] my-2">
+                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
                       {t("industry.explore")}
+                      {i18n.language == "en" ? (
+                        <BsArrowRightCircleFill />
+                      ) : (
+                        <BsArrowLeftCircleFill />
+                      )}
                     </p>
                     <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-white rounded-full border-[8px] border-black">
                       <img src={icon_3} alt="icon_1" className="w-16" />
                     </div>
                   </Link>
-                  <Link className="relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto">
+                  <Link
+                    to={`/${i18n.language}/perfumes`}
+                    className="relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto"
+                  >
                     <img
                       src={bottom_frame}
                       className=" -bottom-8 absolute 2xl:w-[290px] xl:w-[290px] w-[320px] img"
                     />
-                    <p className=" font-bold text-[#000] my-1">
+                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
                       {t("industry.explore")}
+                      {i18n.language == "en" ? (
+                        <BsArrowRightCircleFill />
+                      ) : (
+                        <BsArrowLeftCircleFill />
+                      )}
                     </p>
                     <p className="text-2xl font-bold leading-[1.6]">
                       {" "}
@@ -127,23 +148,36 @@ const Industry = () => {
                       src={top_frame}
                       className=" -top-10  absolute 2xl:w-[290px] xl:w-[290px] w-[320px] img"
                     />
-                    <p className="text-2xl font-bold leading-[1.6]">
+                    <p className="text-2xl font-bold leading-[1.3]">
                       {t("industry.cosmetics")}
                     </p>
-                    <p className=" font-bold text-[#000] my-2">
+                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
                       {t("industry.explore")}
+                      {i18n.language == "en" ? (
+                        <BsArrowRightCircleFill />
+                      ) : (
+                        <BsArrowLeftCircleFill />
+                      )}
                     </p>
                     <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-white rounded-full border-[8px] border-black">
                       <img src={icon_5} alt="icon_1" className="w-16" />
                     </div>
                   </Link>
-                  <Link className="relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto">
+                  <Link
+                    to={`/${i18n.language}/clothes`}
+                    className="relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto"
+                  >
                     <img
                       src={bottom_frame}
                       className=" -bottom-8 absolute 2xl:w-[290px] xl:w-[290px] w-[320px] img"
                     />
-                    <p className=" font-bold text-[#000] my-1">
+                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
                       {t("industry.explore")}
+                      {i18n.language == "en" ? (
+                        <BsArrowRightCircleFill />
+                      ) : (
+                        <BsArrowLeftCircleFill />
+                      )}
                     </p>
                     <p className="text-2xl font-bold leading-[1.2]">
                       {t("industry.clothes")}
@@ -160,8 +194,13 @@ const Industry = () => {
                     <p className="text-2xl font-bold leading-[1.3]">
                       {t("industry.restaurant")}
                     </p>
-                    <p className=" font-bold text-[#000] my-2">
+                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
                       {t("industry.explore")}
+                      {i18n.language == "en" ? (
+                        <BsArrowRightCircleFill />
+                      ) : (
+                        <BsArrowLeftCircleFill />
+                      )}
                     </p>
                     <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-white rounded-full border-[8px] border-black">
                       <img src={icon_7} alt="icon_1" className="w-16" />
@@ -172,8 +211,13 @@ const Industry = () => {
                       src={bottom_frame}
                       className=" -bottom-8 absolute 2xl:w-[290px] xl:w-[290px] w-[320px] img"
                     />
-                    <p className=" font-bold text-[#000] my-1">
+                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
                       {t("industry.explore")}
+                      {i18n.language == "en" ? (
+                        <BsArrowRightCircleFill />
+                      ) : (
+                        <BsArrowLeftCircleFill />
+                      )}
                     </p>
                     <p className="text-2xl font-bold leading-[1.2]">
                       {t("industry.cafes")}
@@ -189,8 +233,13 @@ const Industry = () => {
         }
         our_projects={true}
       />
-
-      <img src={GIF_Logo} alt="Shooting GIF Logo" className="mt-6 -mb-6" />
+      <div className="w-full h-full flex justify-center items-center ">
+        <img
+          src={GIF_Logo}
+          alt="Shooting GIF Logo"
+          className="xl:w-48 lg:w-48 md:w-48 w-40 xl:-mb-12 lg:-mb-12 md:-mb-12 -mb-[120px] xl:mt-12 lg:mt-12 md:mt-12 mt-12   "
+        />
+      </div>{" "}
     </section>
   );
 };

@@ -12,5 +12,14 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".text-justify": {
+          "text-align": "justify",
+          "word-spacing": "-1px",
+        },
+      });
+    },
+  ],
 };

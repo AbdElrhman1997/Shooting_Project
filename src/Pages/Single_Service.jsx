@@ -1,3 +1,4 @@
+import axios from "axios";
 import first_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Restaurant/Al-Shabout01.jpg";
 import second_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Restaurant/Al-Shabout02.jpg";
 import third_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Restaurant/Al-Shabout03.jpg";
@@ -5,12 +6,35 @@ import fourth_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Res
 import fifth_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Restaurant/Al-Shabout05.jpg";
 import sex_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Restaurant/Al-Shabout06.jpg";
 import seven_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Restaurant/Al-Shabout07.jpg";
+import { useEffect, useState } from "react";
 
 const Single_Service = () => {
+  const [service_images, set_service_images] = useState([]);
+  const fetchServices = async () => {
+    try {
+      const response = await axios.get(
+        `https://admin.shootingads.net/api/getBrandImagesApi/1`,
+        {
+          params: { currentPage: 1, per_page: 12 },
+        }
+      );
+      const { data } = response.data;
+      set_service_images(data);
+    } catch (error) {
+      console.error("Error fetching posts", error);
+    } finally {
+      // setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchServices();
+  }, []);
+
   return (
     <section className="text-right">
       <img
-        src={first_image}
+        src={`https://admin.shootingads.net/storage/${service_images[0]?.image}`}
         alt="first_image"
         className="w-full h-full object-cover"
       />{" "}
@@ -47,36 +71,18 @@ const Single_Service = () => {
           AL-Shabout Seafood Restaurant
         </div>
       </div>
-      <img
-        src={second_image}
-        alt="first_image"
-        className="w-full h-full object-cover"
-      />{" "}
-      <img
-        src={third_image}
-        alt="first_image"
-        className="w-full h-full object-cover"
-      />{" "}
-      <img
-        src={fourth_image}
-        alt="first_image"
-        className="w-full h-full object-cover"
-      />{" "}
-      <img
-        src={fifth_image}
-        alt="first_image"
-        className="w-full h-full object-cover"
-      />{" "}
-      <img
-        src={sex_image}
-        alt="first_image"
-        className="w-full h-full object-cover"
-      />{" "}
-      <img
-        src={seven_image}
-        alt="first_image"
-        className="w-full h-full object-cover"
-      />{" "}
+      {service_images?.map((item, index) => {
+        return (
+          index > 0 && (
+            <img
+              key={index}
+              src={`https://admin.shootingads.net/storage/${item?.image}`}
+              alt="first_image"
+              className="w-full h-full object-cover"
+            />
+          )
+        );
+      })}
     </section>
   );
 };
