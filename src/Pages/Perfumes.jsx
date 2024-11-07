@@ -17,6 +17,7 @@ import perfumes_15 from "../assets/Images/Indusrty/Perfumes/Perf_15.webp";
 
 import GIF_Logo from "../assets/Images/Icons/GIF_Logo.gif";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Perfumes = () => {
   const { i18n, t } = useTranslation();
@@ -451,9 +452,12 @@ const Perfumes = () => {
               <p>تحتاج أن تصنع عطرك الخاص؟</p>
               <p className="my-2">{t("markting.contact.consultation_offer")}</p>
             </div>
-            <div className="text-white bg-[#ec3237] w-fit px-8 py-2 font-bold xl:text-xl lg:text-xl md:text-xl text-md mx-auto -mt-[22px]">
+            <Link
+              to={`/${i18n.language}/register_now`}
+              className="block text-white bg-[#ec3237] w-fit px-8 py-2 font-bold xl:text-xl lg:text-xl md:text-xl text-md mx-auto -mt-[22px]"
+            >
               {t("markting.contact.start_now")}
-            </div>
+            </Link>
           </div>
         }
       />

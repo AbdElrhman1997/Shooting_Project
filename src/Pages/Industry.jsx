@@ -1,18 +1,15 @@
 import GeneralFrame from "../Components/GeneralFrame";
-import icon_1 from "../assets/Images/Icons/icon web-04.png";
-import icon_2 from "../assets/Images/Icons/icon web-07.png";
-import icon_3 from "../assets/Images/Icons/icon web-06.png";
-import icon_4 from "../assets/Images/Icons/icon web-12.png";
-import icon_5 from "../assets/Images/Icons/icon web-11.png";
-import icon_6 from "../assets/Images/Icons/icon web-10.png";
-import icon_7 from "../assets/Images/Icons/icon web-13.png";
-import icon_8 from "../assets/Images/Icons/icon web-09.png";
-import top_frame from "../assets/Images/top_frame.png";
-import bottom_frame from "../assets/Images/bottom_frame.png";
+import industry_1 from "../assets/Images/Indusrty/Frame & icon-11.png";
+import industry_2 from "../assets/Images/Indusrty/Frame & icon-12.png";
+import industry_3 from "../assets/Images/Indusrty/Frame & icon-13.png";
+import industry_4 from "../assets/Images/Indusrty/Frame & icon.png";
+import industry_5 from "../assets/Images/Indusrty/Frame & icon-15.png";
+import industry_6 from "../assets/Images/Indusrty/Frame & icon-17.png";
+import industry_7 from "../assets/Images/Indusrty/Frame & icon-14.png";
+import industry_8 from "../assets/Images/Indusrty/Frame & icon-18.png";
 import GIF_Logo from "../assets/Images/Icons/GIF_Logo.gif";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
 const Industry = () => {
   const { i18n, t } = useTranslation();
@@ -47,184 +44,56 @@ const Industry = () => {
                     </p>
                   </div>
                 </div>
-                <div className="grid grid-cols-12 2xl:gap-x-8 xl:gap-x-8 2xl:px-16 xl:px-16 lg:px-8 gap-y-32 px-4 mt-16">
+                <div className="grid grid-cols-12 gap-y-12 2xl:px-10 xl:px-10 lg:px-10 md:px-10 px-4 2xl:mt-16 xl:mt-16 lg:mt-16 md:mt-12 mt-0">
                   <Link
                     to={`/${i18n.language}/printing`}
-                    className=" relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto hover:opacity-90"
+                    className="xl:col-span-3 lg:col-span-3 col-span-6 2xl:-mx-[7.5px] xl:-mx-[6.6px] lg:-mx-[5.7px] md:-mx-[10px] -mx-[3.3px] hover:opacity-85"
                   >
-                    <img
-                      src={top_frame}
-                      className=" -top-10  absolute 2xl:w-[290px] xl:w-[290px] w-[320px] img"
-                    />
-                    <p className="text-2xl font-bold leading-[1.6]">
-                      {t("industry.printing")}
-                    </p>
-                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
-                      {t("industry.explore")}
-                      {i18n.language == "en" ? (
-                        <BsArrowRightCircleFill />
-                      ) : (
-                        <BsArrowLeftCircleFill />
-                      )}
-                    </p>
-                    <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-white rounded-full border-[8px] border-black">
-                      <img src={icon_1} alt="icon_1" className="w-16" />
-                    </div>
+                    <img src={industry_1} className="" />
                   </Link>
-                  <Link className="relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto">
-                    <img
-                      src={bottom_frame}
-                      className=" -bottom-8 absolute 2xl:w-[290px] xl:w-[290px] w-[320px] img"
-                    />
-                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
-                      {t("industry.explore")}
-                      {i18n.language == "en" ? (
-                        <BsArrowRightCircleFill />
-                      ) : (
-                        <BsArrowLeftCircleFill />
-                      )}
-                    </p>
-                    <p className="text-2xl font-bold leading-[1.2]">
-                      {t("industry.exhibitions")}
-                    </p>
-                    <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-white rounded-full border-[8px] border-black">
-                      <img src={icon_2} alt="icon_1" className="w-16" />
-                    </div>
+                  <Link
+                    to={`/${i18n.language}/theatres`}
+                    className="xl:col-span-3 lg:col-span-3 col-span-6 2xl:-mx-[7.5px] xl:-mx-[6.6px] lg:-mx-[5.7px] md:-mx-[10px] -mx-[3.3px] hover:opacity-85"
+                  >
+                    <img src={industry_2} className="" />
+                  </Link>
+                  <Link
+                    to={`/${i18n.language}/events`}
+                    className="xl:col-span-3 lg:col-span-3 col-span-6 2xl:-mx-[7.5px] xl:-mx-[6.6px] lg:-mx-[5.7px] md:-mx-[10px] -mx-[3.3px] hover:opacity-85"
+                  >
+                    <img src={industry_3} className="" />
                   </Link>
                   <Link
                     to={`/${i18n.language}/perfumes`}
-                    className=" relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto hover:opacity-90"
+                    className="xl:col-span-3 lg:col-span-3 col-span-6 2xl:-mx-[7.5px] xl:-mx-[6.6px] lg:-mx-[5.7px] md:-mx-[10px] -mx-[3.3px] hover:opacity-85"
                   >
-                    <img
-                      src={top_frame}
-                      className=" -top-10  absolute 2xl:w-[290px] xl:w-[290px] w-[320px] img"
-                    />
-                    <p className="text-2xl font-bold leading-[1.3]">
-                      {t("industry.events")}
-                    </p>
-                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
-                      {t("industry.explore")}
-                      {i18n.language == "en" ? (
-                        <BsArrowRightCircleFill />
-                      ) : (
-                        <BsArrowLeftCircleFill />
-                      )}
-                    </p>
-                    <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-white rounded-full border-[8px] border-black">
-                      <img src={icon_3} alt="icon_1" className="w-16" />
-                    </div>
-                  </Link>
-                  <Link
-                    to={`/${i18n.language}/perfumes`}
-                    className="relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto"
-                  >
-                    <img
-                      src={bottom_frame}
-                      className=" -bottom-8 absolute 2xl:w-[290px] xl:w-[290px] w-[320px] img"
-                    />
-                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
-                      {t("industry.explore")}
-                      {i18n.language == "en" ? (
-                        <BsArrowRightCircleFill />
-                      ) : (
-                        <BsArrowLeftCircleFill />
-                      )}
-                    </p>
-                    <p className="text-2xl font-bold leading-[1.6]">
-                      {" "}
-                      {t("industry.fragrances")}
-                    </p>
-                    <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-white rounded-full border-[8px] border-black">
-                      <img src={icon_4} alt="icon_1" className="w-16" />
-                    </div>
+                    <img src={industry_4} className="" />
                   </Link>
                 </div>
-                <div className="grid grid-cols-12 2xl:gap-x-8 xl:gap-x-8 2xl:px-16 xl:px-16 lg:px-8 gap-y-32 px-4 my-32">
+                <div className="grid grid-cols-12 gap-y-12 2xl:px-10 xl:px-10 lg:px-10 md:px-10 px-4 2xl:mt-16 xl:mt-16 lg:mt-16 md:mt-12 mt-10">
                   <Link
-                    to={"/markting"}
-                    className=" relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto hover:opacity-90"
+                    to={`/${i18n.language}/make-up`}
+                    className="xl:col-span-3 lg:col-span-3 col-span-6 2xl:-mx-[7.5px] xl:-mx-[6.6px] lg:-mx-[5.7px] md:-mx-[10px] -mx-[3.3px] hover:opacity-85"
                   >
-                    <img
-                      src={top_frame}
-                      className=" -top-10  absolute 2xl:w-[290px] xl:w-[290px] w-[320px] img"
-                    />
-                    <p className="text-2xl font-bold leading-[1.3]">
-                      {t("industry.cosmetics")}
-                    </p>
-                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
-                      {t("industry.explore")}
-                      {i18n.language == "en" ? (
-                        <BsArrowRightCircleFill />
-                      ) : (
-                        <BsArrowLeftCircleFill />
-                      )}
-                    </p>
-                    <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-white rounded-full border-[8px] border-black">
-                      <img src={icon_5} alt="icon_1" className="w-16" />
-                    </div>
+                    <img src={industry_5} className="" />
                   </Link>
                   <Link
                     to={`/${i18n.language}/clothes`}
-                    className="relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto"
+                    className="xl:col-span-3 lg:col-span-3 col-span-6 2xl:-mx-[7.5px] xl:-mx-[6.6px] lg:-mx-[5.7px] md:-mx-[10px] -mx-[3.3px] hover:opacity-85"
                   >
-                    <img
-                      src={bottom_frame}
-                      className=" -bottom-8 absolute 2xl:w-[290px] xl:w-[290px] w-[320px] img"
-                    />
-                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
-                      {t("industry.explore")}
-                      {i18n.language == "en" ? (
-                        <BsArrowRightCircleFill />
-                      ) : (
-                        <BsArrowLeftCircleFill />
-                      )}
-                    </p>
-                    <p className="text-2xl font-bold leading-[1.2]">
-                      {t("industry.clothes")}
-                    </p>
-                    <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-white rounded-full border-[8px] border-black">
-                      <img src={icon_6} alt="icon_1" className="w-16" />
-                    </div>
+                    <img src={industry_6} className="" />
                   </Link>
-                  <Link className=" relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto hover:opacity-90">
-                    <img
-                      src={top_frame}
-                      className=" -top-10  absolute 2xl:w-[290px] xl:w-[290px] w-[320px] img"
-                    />
-                    <p className="text-2xl font-bold leading-[1.3]">
-                      {t("industry.restaurant")}
-                    </p>
-                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
-                      {t("industry.explore")}
-                      {i18n.language == "en" ? (
-                        <BsArrowRightCircleFill />
-                      ) : (
-                        <BsArrowLeftCircleFill />
-                      )}
-                    </p>
-                    <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-white rounded-full border-[8px] border-black">
-                      <img src={icon_7} alt="icon_1" className="w-16" />
-                    </div>
+                  <Link
+                    to={`/${i18n.language}/resturant`}
+                    className="xl:col-span-3 lg:col-span-3 col-span-6 2xl:-mx-[7.5px] xl:-mx-[6.6px] lg:-mx-[5.7px] md:-mx-[10px] -mx-[3.3px] hover:opacity-85"
+                  >
+                    <img src={industry_7} className="" />
                   </Link>
-                  <Link className="relative h-[197.5px] shadow-xl xl:col-span-3 lg:col-span-6 md:col-span-6 col-span-12 flex flex-col justify-center items-center text-center p-12 rounded-2xl 2xl:w-full xl:w-full w-[230px] mx-auto">
-                    <img
-                      src={bottom_frame}
-                      className=" -bottom-8 absolute 2xl:w-[290px] xl:w-[290px] w-[320px] img"
-                    />
-                    <p className=" font-bold text-[#000] my-2 flex items-center gap-x-2">
-                      {t("industry.explore")}
-                      {i18n.language == "en" ? (
-                        <BsArrowRightCircleFill />
-                      ) : (
-                        <BsArrowLeftCircleFill />
-                      )}
-                    </p>
-                    <p className="text-2xl font-bold leading-[1.2]">
-                      {t("industry.cafes")}
-                    </p>
-                    <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-white rounded-full border-[8px] border-black">
-                      <img src={icon_8} alt="icon_1" className="w-16" />
-                    </div>
+                  <Link
+                    to={`/${i18n.language}/cafes`}
+                    className="xl:col-span-3 lg:col-span-3 col-span-6 2xl:-mx-[7.5px] xl:-mx-[6.6px] lg:-mx-[5.7px] md:-mx-[10px] -mx-[3.3px] hover:opacity-85"
+                  >
+                    <img src={industry_8} className="" />
                   </Link>
                 </div>
               </div>

@@ -29,6 +29,11 @@ import RegisterNow from "./Pages/RegisterNow";
 import Printing from "./Pages/Printing";
 import Perfumes from "./Pages/Perfumes";
 import Clothes from "./Pages/Clothes";
+import Cafes from "./Pages/Cafes";
+import Resturants from "./Pages/Resturants";
+import Events from "./Pages/Events";
+import Theatres from "./Pages/Theatres";
+import MakeUp from "./Pages/MakeUp";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -59,6 +64,11 @@ const AppRoutes = () => {
         <Route path="printing" element={<Printing />} />
         <Route path="perfumes" element={<Perfumes />} />
         <Route path="clothes" element={<Clothes />} />
+        <Route path="cafes" element={<Cafes />} />
+        <Route path="resturant" element={<Resturants />} />
+        <Route path="events" element={<Events />} />
+        <Route path="theatres" element={<Theatres />} />
+        <Route path="make-up" element={<MakeUp />} />
         <Route path="register_now" element={<RegisterNow />} />
         <Route path="single_service/:id" element={<Single_Service />} />
       </Route>

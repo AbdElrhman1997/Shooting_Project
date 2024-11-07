@@ -7,23 +7,32 @@ import GIF_Logo from "../assets/Images/Icons/GIF_Logo.gif";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Pagination from "../Components/Pagination";
 
 const Brands_Projects = () => {
   const { i18n, t } = useTranslation();
   const [Services, setServices] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [pagination, setPagination] = useState({
+    count: 0,
+    current_page: 1,
+    per_page: 6,
+    total: 0,
+    total_pages: 1,
+  });
 
-  const fetchServices = async () => {
+  const fetchServices = async (page = 1) => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://admin.shootingads.net/api/getBrand`,
+        `https://admin.shootingads.net/api/getBrandApiForService?service=1`,
         {
-          params: { currentPage: 1, per_page: 12 },
+          params: { currentPage: page },
         }
       );
-      const { data } = response.data;
+      const { data, pagination: paginationFromService } = response.data;
       setServices(data);
+      setPagination(paginationFromService);
     } catch (error) {
       console.error("Error fetching posts", error);
     } finally {
@@ -32,8 +41,13 @@ const Brands_Projects = () => {
   };
 
   useEffect(() => {
-    fetchServices();
-  }, []);
+    fetchServices(pagination.current_page);
+  }, [pagination.current_page]);
+
+  const handlePageChange = (page) => {
+    setPagination((prev) => ({ ...prev, current_page: page }));
+    fetchServices(page);
+  };
 
   return (
     <section dir={i18n.language === "ar" ? "rtl" : "ltr"}>
@@ -162,9 +176,12 @@ const Brands_Projects = () => {
               <p>{t("brands_projects.need_design")}</p>
               <p className="my-2">{t("brands_projects.dont_hesitate")}</p>
             </div>
-            <div className="text-white bg-[#ec3237] w-fit px-8 py-2 font-bold xl:text-xl lg:text-xl md:text-xl text-md mx-auto -mt-[22px]">
-              {t("brands_projects.start_now")}
-            </div>
+            <Link
+              to={`/${i18n.language}/register_now`}
+              className="block text-white bg-[#ec3237] w-fit px-8 py-2 font-bold xl:text-xl lg:text-xl md:text-xl text-md mx-auto -mt-[22px]"
+            >
+              {t("markting.contact.start_now")}
+            </Link>
           </div>
         }
       />
@@ -177,7 +194,7 @@ const Brands_Projects = () => {
             <Link
               key={index + 1}
               className="relative xl:col-span-2 lg:col-span-2 md:col-span-3 col-span-3 cursor-pointer overflow-hidden group"
-              to={"/services/1"}
+              to={`/${i18n.language}/single_service/${item?.id}`}
             >
               <img
                 src={`https://admin.shootingads.net/public/images/${item?.image}`}
@@ -189,19 +206,49 @@ const Brands_Projects = () => {
                 className="w-full h-52 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
               />
               <div className="service-hover w-full h-full absolute top-0 left-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-              <div className="absolute bottom-6 left-0 mx-4 text-right font-bold transition-all duration-300 ease-in-out">
+              <div
+                className={`absolute bottom-6 ${
+                  i18n.language == "en"
+                    ? "left-0 text-left"
+                    : "right-0 text-right"
+                } mx-4 font-bold transition-all duration-300 ease-in-out`}
+              >
                 <p className="text-white text-[17px] opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
                   {i18n.language === "en"
                     ? item?.brand_name_en
                     : item?.brand_name_ar}
                 </p>
                 <p className="text-white text-[13px] opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100">
-                  {item?.subTitle}
+                  {item?.categories?.map((project, index) => {
+                    return (
+                      <span key={index}>
+                        {i18n.language === "en"
+                          ? project?.name_en
+                          : project?.name_ar}
+                        {index < item?.categories?.length - 1 && (
+                          <span
+                            className={`${
+                              i18n.language === "en" ? "none" : "inline"
+                            }`}
+                          >
+                            {" - "}
+                          </span>
+                        )}
+                      </span>
+                    );
+                  })}
                 </p>
               </div>
             </Link>
           );
         })}
+      </div>
+      <div className="col-span-12">
+        <Pagination
+          currentPage={pagination?.current_page}
+          totalPages={pagination?.total_pages}
+          onPageChange={handlePageChange}
+        />
       </div>
       <div className="w-full h-full flex justify-center items-center ">
         <img

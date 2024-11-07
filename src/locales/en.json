@@ -78,6 +78,7 @@
     "addressTitle": "Address",
     "address": "Office No. 902, 9th Floor, Al-Noor Passage, Al-Olaya District, Riyadh 12222, Kingdom of Saudi Arabia",
     "contactTitle": "Contact Us",
+    "importantLinks": "Important Links",
     "phone": "+966555992584",
     "email": "info@shootingads.net",
     "socialMediaTitle": "Social Media",
@@ -156,7 +157,25 @@
     "restaurant": "Restaurants",
     "cafes": "Cafes"
   },
-  "blogs": { "title": "Blogs", "read_more": "Read More" },
+  "blogs": {
+    "title": "Blogs",
+    "read_more": "Read More",
+    "previous_article": "Previous Article",
+    "next_article": "Next Article",
+    "article_contents": "Article Contents",
+    "services": "Services",
+    "latest_articles": "Latest Articles",
+    "topics": {
+      "brand_identity": "Brand Identity",
+      "spatial_identity": "Spatial Identity",
+      "website": "Website",
+      "marketing": "Marketing & Advertising",
+      "photography": "Photography & Production",
+      "social_media": "Social Media",
+      "printing": "Printing",
+      "industry_support": "Industry Support"
+    }
+  },
   "employment": {
     "welcome": {
       "message": "Our approach is a language, and we are its letters. With your presence, our meanings are complete.",
@@ -419,5 +438,55 @@
     "contactUs_1": "? Need social media management",
     "contactUs_2": "Feel free to contact us for the necessary consultation",
     "startNow": "Start Now"
+  },
+  "photos": {
+    "header": "The Art of Bringing Visions to Life",
+    "title1": "Photography and Artistic Production",
+    "description1": "We transform ideas into vibrant images... to convey your message clearly",
+    "section1": {
+      "title": "Photography",
+      "content": "We create details that reflect quality, focusing on precision to set your project apart with high quality, as well as on the basic elements and materials to enhance the scene and convey your targeted message."
+    },
+    "section2": {
+      "title": "Editing and Professional Touches",
+      "content": "It’s the process of coloring and merging scenes to create a cohesive visual and artistic message. The editor writes the work in the editing room after reading what the director has scripted."
+    },
+    "section3": {
+      "title": "Photography Space for Rent",
+      "content": "An indoor studio inspiring creativity with outdoor locations featuring green landscapes, overlooking the multi-angled towers of the Kingdom, allowing the photographer to create images that fit the intended idea and message."
+    },
+    "section4": {
+      "title": "Production and Artistic Direction",
+      "content": "Filming cinematic videos, commercial ads, and social media content, involving (storyboarding - idea approval - equipment preparation - coordination - filming - editing - final approval)"
+    },
+    "section5": {
+      "title": "Audio Production and Sound Engineering",
+      "content": "Recording and refining audio through technical devices and sound engineering, producing podcasts, music, and sound effects to create an experience aligned with your vision."
+    },
+    "product_photography": "Product Photography",
+    "cinematic_video": "Cinematic Video",
+    "voiceover": "Voiceover",
+    "portrait_photography": "Portrait Photography",
+    "conference_photography": "Conference Photography",
+    "documentaries": "Documentaries",
+    "recording_mixing": "Recording and Mixing",
+    "special_event_photography": "Special Event Photography",
+    "company_events": "Corporate Events Photography",
+    "commercial_advertising": "Commercial Advertising",
+    "sound_effects": "Sound Effects",
+    "wedding_photography": "Wedding Photography",
+    "exhibitions_events": "Exhibitions and Events Photography",
+    "introductory_videos": "Introductory Videos",
+    "soundtrack": "Soundtrack",
+    "beauty_fashion_photography": "Beauty and Fashion Photography",
+    "motion_graphics": "Motion Graphics Videos",
+    "art_clips": "Art Clips",
+    "content_creation": "Content Creation and Preparation",
+    "photo_album_box": "Photo Album Box Creation and Engraving",
+    "drone_photography": "Aerial Drone Photography",
+    "sports_photography": "Sports and Racing Photography",
+    "live_broadcast_services": "Live Broadcast Services",
+    "album_creation": "Thermal Photo Album Creation (30x30) or (A4)",
+    "our_projects": "Our work in photography and artistic production"
   }
 }

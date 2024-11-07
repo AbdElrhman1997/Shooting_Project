@@ -35,10 +35,10 @@ const OurPartners = () => {
 
   return (
     <section className="bg-white overflow-x-hidden" dir="ltr">
-      <p className="text-black border-b-[#ec3237] border-b-[3px] w-fit mx-auto pb-4 xl:text-5xl lg:text-5xl md:text-5xl text-3xl font-bold xl:mt-24 lg:mt-24 mt-10">
+      <p className="text-black border-b-[#ec3237] border-b-[6px] w-fit mx-auto pb-4 xl:text-5xl lg:text-5xl md:text-5xl text-3xl font-bold 2xl:mt-0 xl:mt-24 lg:mt-24 mt-10">
         {t("partners.title")}
       </p>
-      <div className="relative flex justify-between items-center 2xl:my-16 xl:my-16 lg:my-16 md:my-16 my-8">
+      <div className="relative flex justify-between items-center 2xl:my-4 xl:my-4 lg:my-4 md:my-4 my-0">
         <div className="custom-prev-arrow-2 z-10 cursor-pointer p-4">
           <img
             src={arrow_left}
@@ -96,7 +96,7 @@ const OurPartners = () => {
       </div>
       <Link
         to={`/${i18n.language}/our_projects`}
-        className="rounded-full block bg-[#ec3237] w-fit px-24 py-[12px] font-bold xl:text-xl lg:text-xl md:text-xl text-md mx-auto mb-16"
+        className="rounded-full block bg-[#ec3237] w-fit px-24 py-[12px] font-bold 2xl:text-3xl xl:text-xl lg:text-xl md:text-xl text-md mx-auto mb-16"
       >
         {t("partners.discoverClients")}
       </Link>

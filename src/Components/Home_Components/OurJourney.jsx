@@ -10,10 +10,13 @@ const OurJourney = () => {
   const { t } = useTranslation();
 
   return (
-    <div dir="rtl" className="xl:mt-20 lg:mt-20 md:mt-20 mt-10 min-h-[70vh]">
-      <div className="-z-10 xl:-mt-[4.6rem] lg:-mt-[4.6rem] md:-mt-[4.6rem] -mt-[.6rem]">
+    <div
+      dir="rtl"
+      className="xl:mt-20 lg:mt-20 md:mt-20 mt-4 2xl:min-h-[60vh] xl:min-h-[70vh] lg:min-h-[70vh] md:min-h-[70vh] :min-h-[70vh]"
+    >
+      <div className="-z-10 2xl:-mt-[3.2rem] xl:-mt-[4.6rem] lg:-mt-[4.6rem] md:-mt-[4.6rem] -mt-[.6rem]">
         <div className="grid grid-cols-6 gap-x-6 text-black xl:px-16 lg:px-16 md:px-16 px-4 xl:mt-10 lg:mt-10 md:mt-10 relative xl:text-right lg:text-right text-center">
-          <p className="col-span-6 border-b-[#ec3237] border-b-[3px] w-fit xl:mx-0 lg:mx-0 mx-auto pb-4 xl:text-5xl lg:text-5xl md:text-5xl text-3xl font-bold">
+          <p className="col-span-6 border-b-[#ec3237] border-b-[6px] w-fit xl:mx-0 lg:mx-0 mx-auto pb-4 xl:text-5xl lg:text-5xl md:text-5xl text-3xl font-bold">
             {t("journey.title")}
           </p>
           <div
@@ -23,7 +26,7 @@ const OurJourney = () => {
               minHeight: "350px",
             }}
           ></div>
-          <ul className="xl:leading-loose leading-relaxed mt-8 xl:mx-0 lg:mx-0 md:mx-0 mx-auto xl:col-span-3 lg:col-span-3 col-span-6 text-xl font-bold mb-10 w-11/12 ">
+          <ul className="2xl:leading-loose xl:leading-loose leading-relaxed 2xl:mt-8 xl:mt-8 lg:mt-8 md:mt-8  mt-4 xl:mx-0 lg:mx-0 md:mx-0 mx-auto xl:col-span-3 lg:col-span-3 col-span-6 2xl:text-xl xl:text-xl lg:text-xl md:text-lg text-[14px] font-bold mb-10 w-11/12 text-justify">
             <li className="relative flex gap-x-2 items-center">
               {t("journey.history")}
             </li>

@@ -10,6 +10,7 @@ import clothes_8 from "../assets/Images/Indusrty/Clothes/clothes_8.webp";
 
 import GIF_Logo from "../assets/Images/Icons/GIF_Logo.gif";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Clothes = () => {
   const { i18n, t } = useTranslation();
@@ -275,9 +276,12 @@ const Clothes = () => {
               <p>تحتاج أن تصنع براند ملابسك الخاص؟</p>
               <p className="my-2">{t("markting.contact.consultation_offer")}</p>
             </div>
-            <div className="text-white bg-[#ec3237] w-fit px-8 py-2 font-bold xl:text-xl lg:text-xl md:text-xl text-md mx-auto -mt-[22px]">
+            <Link
+              to={`/${i18n.language}/register_now`}
+              className="block text-white bg-[#ec3237] w-fit px-8 py-2 font-bold xl:text-xl lg:text-xl md:text-xl text-md mx-auto -mt-[22px]"
+            >
               {t("markting.contact.start_now")}
-            </div>
+            </Link>
           </div>
         }
       />

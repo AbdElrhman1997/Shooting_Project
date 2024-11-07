@@ -1,11 +1,4 @@
 import axios from "axios";
-import first_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Restaurant/Al-Shabout01.jpg";
-import second_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Restaurant/Al-Shabout02.jpg";
-import third_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Restaurant/Al-Shabout03.jpg";
-import fourth_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Restaurant/Al-Shabout04.jpg";
-import fifth_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Restaurant/Al-Shabout05.jpg";
-import sex_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Restaurant/Al-Shabout06.jpg";
-import seven_image from "../assets/Images/ServicesImages/Al-Shabout Seafood Restaurant/Al-Shabout07.jpg";
 import { useEffect, useState } from "react";
 
 const Single_Service = () => {

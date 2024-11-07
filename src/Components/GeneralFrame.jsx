@@ -11,10 +11,10 @@ const GeneralFrame = (params) => {
   return (
     <div className="bg-[#000]">
       <div>
-        <div className="flex 2xl:h-14 xl:h-10 lg:h-14 md:14 h-10" dir="rtl">
+        <div className="flex 2xl:h-10 xl:h-10 lg:h-14 md:14 h-10" dir="rtl">
           <div className="2xl:w-10 xl:w-10 lg:w-10 md:w-10 w-10 ">
             <div
-              className="bg-white w-full h-full rounded-tr-[100px] 2xl:rounded-bl-[15px] xl:rounded-bl-[30px] lg:rounded-bl-[30px] md:rounded-bl-[30px] rounded-bl-[35px]"
+              className="bg-white w-full h-full rounded-tr-[100px] 2xl:rounded-bl-[30px] xl:rounded-bl-[30px] lg:rounded-bl-[30px] md:rounded-bl-[30px] rounded-bl-[35px]"
               style={{
                 borderBottom: "1px solid black",
               }}
@@ -22,7 +22,7 @@ const GeneralFrame = (params) => {
           </div>
           <div className="w-full">
             <div
-              className="bg-white w-full h-full 2xl:rounded-bl-[15px] xl:rounded-bl-[12px] lg:rounded-bl-[12px] md:rounded-bl-[12px] rounded-bl-[12px] 2xl:rounded-br-[15px] xl:rounded-br-[12px] lg:rounded-br-[12px] md:rounded-br-[12px] rounded-br-[12px]"
+              className="bg-white w-full h-full 2xl:rounded-bl-[12px] xl:rounded-bl-[12px] lg:rounded-bl-[12px] md:rounded-bl-[12px] rounded-bl-[12px] 2xl:rounded-br-[12px] xl:rounded-br-[12px] lg:rounded-br-[12px] md:rounded-br-[12px] rounded-br-[12px]"
               style={{
                 border: "1px solid black",
                 borderTop: "none",
@@ -31,7 +31,7 @@ const GeneralFrame = (params) => {
           </div>
           <div className="2xl:w-10 xl:w-10 lg:w-10 md:w-10 w-10">
             <div
-              className="bg-white w-full h-full rounded-tl-[100px] 2xl:rounded-br-[15px] xl:rounded-br-[32px] lg:rounded-br-[32px] md:rounded-br-[30px] rounded-br-[35px]"
+              className="bg-white w-full h-full rounded-tl-[100px] 2xl:rounded-br-[32px] xl:rounded-br-[32px] lg:rounded-br-[32px] md:rounded-br-[30px] rounded-br-[35px]"
               style={{
                 borderBottom: "1px solid black",
               }}
@@ -43,7 +43,7 @@ const GeneralFrame = (params) => {
         <div className="flex" dir="rtl">
           <div className="2xl:w-10 xl:w-10 lg:w-10 md:w-10 w-10">
             <div
-              className="bg-white w-full h-full 2xl:rounded-bl-[10px] xl:rounded-bl-[12px] lg:rounded-bl-[11px] md:rounded-bl-[11px] rounded-bl-[12px] 2xl:rounded-tl-[15px] xl:rounded-tl-[10px] lg:rounded-tl-[10px] md:rounded-tl-[10px] rounded-tl-[10px]"
+              className="bg-white w-full h-full 2xl:rounded-bl-[12px] xl:rounded-bl-[12px] lg:rounded-bl-[11px] md:rounded-bl-[11px] rounded-bl-[15px] 2xl:rounded-tl-[10px] xl:rounded-tl-[10px] lg:rounded-tl-[10px] md:rounded-tl-[10px] rounded-tl-[10px]"
               style={{
                 borderBottom: "1px solid black",
               }}
@@ -82,7 +82,7 @@ const GeneralFrame = (params) => {
             </div>
             <div className="w-full">
               <div
-                className="bg-white w-full h-full 2xl:rounded-[10px] xl:rounded-[11px] lg:rounded-[10px] md:rounded-[10px] rounded-[10px]"
+                className="bg-white w-full h-full 2xl:rounded-[11px] xl:rounded-[11px] lg:rounded-[10px] md:rounded-[10px] rounded-[10px]"
                 style={{
                   border: "1px solid black",
                   borderTop: "none",

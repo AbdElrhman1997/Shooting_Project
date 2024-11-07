@@ -85,7 +85,7 @@ const ServicesSection = () => {
           >
             {t("services.seo")}
           </Link>
-          <span className="text-[#ec3237] mx-[6px] font-bold 2xl:block xl:block lg:block md:block hidden">
+          <span className="text-[#ec3237] mx-[6px] font-bold 2xl:block xl:block lg:block md:block">
             |
           </span>
           <Link
@@ -111,8 +111,17 @@ const ServicesSection = () => {
                     ? item?.brand_name_en
                     : item?.brand_name_ar
                 }
-                className="w-full 2xl:h-52 xl:h-56 lg:h-48 md:h-48 h-32 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+                className="w-full 2xl:h-64 xl:h-60 lg:h-60 md:h-60 h-32 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
               />
+              {/* <img
+                src={`https://admin.shootingads.net/public/images/${item?.image}`}
+                alt={
+                  i18n.language === "en"
+                    ? item?.brand_name_en
+                    : item?.brand_name_ar
+                }
+                className="w-full 2xl:h-52 xl:h-56 lg:h-48 md:h-48 h-32 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+              /> */}
               <div className="service-hover w-full h-full absolute top-0 left-0 bg-black bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
               <div
                 className={`absolute bottom-6 ${
@@ -153,7 +162,7 @@ const ServicesSection = () => {
       </div>
       <Link
         to={`/${i18n.language}/our_projects`}
-        className="rounded-full block bg-[#ec3237] w-fit px-24 py-[10px] mt-4 font-bold xl:text-xl lg:text-xl md:text-xl text-md mx-auto my-16"
+        className="rounded-full block bg-[#ec3237] w-fit px-24 py-[10px] mt-4 font-bold 2xl:text-3xl xl:text-xl lg:text-xl md:text-xl text-md mx-auto my-16"
       >
         {t("services.creations")}
       </Link>

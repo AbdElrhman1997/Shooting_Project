@@ -5,6 +5,7 @@ import seo_3 from "../assets/Images/ServicesImages/seo_3.webp";
 
 import GIF_Logo from "../assets/Images/Icons/GIF_Logo.gif";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const SeoImprove = () => {
   const { i18n, t } = useTranslation();
@@ -220,9 +221,12 @@ const SeoImprove = () => {
               <p>{t("seo_improve.contactUs_1")}</p>
               <p className="my-2">{t("seo_improve.contactUs_2")}</p>
             </div>
-            <div className="text-white bg-[#ec3237] w-fit px-8 py-2 font-bold xl:text-xl lg:text-xl md:text-xl text-md mx-auto -mt-[22px]">
-              {t("seo_improve.startNow")}
-            </div>
+            <Link
+              to={`/${i18n.language}/register_now`}
+              className="block text-white bg-[#ec3237] w-fit px-8 py-2 font-bold xl:text-xl lg:text-xl md:text-xl text-md mx-auto -mt-[22px]"
+            >
+              {t("markting.contact.start_now")}
+            </Link>
           </div>
         }
       />

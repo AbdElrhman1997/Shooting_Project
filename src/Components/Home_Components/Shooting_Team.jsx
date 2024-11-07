@@ -5,10 +5,10 @@ const Shooting_Team = () => {
 
   return (
     <section
-      className="bg-[#000000] text-white text-center py-12 xl:px-16 lg:px-16 md:px-12 px-4 "
+      className="bg-[#000000] text-white py-12 xl:px-16 lg:px-16 md:px-12 px-4 2xl:text-center xl:text-center lg:text-center md:text-center text-justify"
       dir={i18n.language === "en" ? "ltr" : "rtl"}
     >
-      <p className="xl:text-[32px] lg:text-[32px] md:text-[32px] text-[28px] mb-12 font-medium ">
+      <p className="xl:text-[32px] lg:text-[32px] md:text-[32px] text-[28px] mb-12 font-medium text-center">
         <span className="text-in-cottetion relative">
           {t("shootingTeam.title")}
         </span>

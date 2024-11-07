@@ -32,7 +32,7 @@ const HomBackground = () => {
           <img
             src={home_bg_2}
             alt="Slide 2"
-            className="xl:mb-0 lg:mb-0 md:mb-2 mb-6"
+            className="xl:mb-0 lg:mb-0 md:mb-2 mb-6 2xl:min-h-[400px] xl:min-h-[400px] lg:min-h-[400px] md:min-h-[400px] min-h-[200px]"
           />
         </SwiperSlide>
       </Swiper>

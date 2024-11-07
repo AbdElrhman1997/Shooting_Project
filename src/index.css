@@ -27,6 +27,15 @@ body {
   background-color: white !important; /* Your custom color */
 }
 
+@media (min-width: 1536px) {
+  body {
+    width: 80%;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    margin: 0 auto;
+  }
+}
+
 .clip-path-closed {
   clip-path: polygon(100% 0, 100% 100%, 100% 100%, 100% 0);
 }
@@ -101,13 +110,13 @@ body {
 
 .footer_lg_bg {
   clip-path: ellipse(137% 82% at 50% 100%);
-  padding-top: 170px; /* Default for small screens */
+  padding-top: 230px; /* Default for small screens */
 }
 
 @media (min-width: 768px) {
   .footer_lg_bg {
     clip-path: ellipse(64% 82% at 49% 100%);
-    padding-top: 80px; /* Default for small screens */
+    padding-top: 90px; /* Default for small screens */
   }
 }
 
@@ -145,7 +154,6 @@ body {
 .blog-details {
   font-size: 20px;
   line-height: 2;
-  max-height: 1000px;
   overflow-y: scroll;
   margin: 0;
   scrollbar-width: none; /* For Firefox */
@@ -156,15 +164,8 @@ body {
   display: none;
 }
 
-.test::before {
-  content: \f314;
-  position: absolute;
-  color: red;
-  background-color: #ec3237;
-}
-
 .center-line {
-  height: 400px;
+  height: 300px;
   width: 1.35px;
   background-color: black;
   position: relative;
@@ -179,8 +180,7 @@ body {
   right: 50%;
   transform: translateX(50%);
 }
-.test {
-}
+
 .center-line-services {
   height: 170px;
   width: 1.35px;
@@ -234,7 +234,70 @@ body {
   text-align: inherit;
 }
 
-.test {
-  text-align: justify;
-  word-spacing: -2px;
+.services-border-top {
+  background-color: #333;
+  height: 60%;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  z-index: 0; /* Ensure it stays behind the Link */
+}
+.services-border-top::after {
+  content: "";
+  width: 60px; /* Size of the circles */
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  bottom: -10px; /* Position them above the top edge of .services-border */
+  right: 0;
+  z-index: 1;
+  transform: rotate(47deg) translateY(-12px);
+}
+.services-border-top::before {
+  content: "";
+  width: 60px; /* Size of the circles */
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  bottom: -10px; /* Position them above the top edge of .services-border */
+  left: 0;
+  z-index: 1;
+  transform: rotate(-47deg) translateY(-12px);
+}
+
+.services-border-bottom {
+  background-color: #333;
+  height: 60%;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  z-index: 0; /* Ensure it stays behind the Link */
+}
+.services-border-bottom::after {
+  content: "";
+  width: 60px; /* Size of the circles */
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: -10px; /* Position them above the bottom edge of .services-border */
+  right: 0;
+  z-index: 1;
+  transform: rotate(47deg) translateY(-12px);
+}
+.services-border-bottom::before {
+  content: "";
+  width: 60px; /* Size of the circles */
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: -10px; /* Position them above the bottom edge of .services-border */
+  left: 0;
+  z-index: 1;
+  transform: rotate(-47deg) translateY(-12px);
 }

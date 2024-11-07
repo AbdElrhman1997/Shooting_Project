@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
-  faFacebookF,
+  faSnapchat,
   faInstagram,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
@@ -55,25 +55,45 @@ const Header = () => {
                     {i18n.language === "en" ? "العربية" : "ENGLISH"}
                   </button>
                 </div>
-                <a className="icon flex justify-center items-center w-10 h-10 cursor-pointer border-r-[1.5px] border-black">
+                <a
+                  href="https://wa.me/966555992584"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon flex justify-center items-center w-10 h-10 cursor-pointer border-r-[1.5px] border-black"
+                >
                   <FontAwesomeIcon
                     icon={faWhatsapp}
                     className="text-black text-lg"
                   />
                 </a>
-                <a className="icon flex justify-center items-center w-10 h-10 border-r-[1.5px] border-black mx-auto cursor-pointer">
+                <a
+                  href="https://www.instagram.com/shooting.agency"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon flex justify-center items-center w-10 h-10 border-r-[1.5px] border-black mx-auto cursor-pointer"
+                >
                   <FontAwesomeIcon
                     icon={faInstagram}
                     className="text-black text-lg"
                   />
                 </a>
-                <a className="icon flex justify-center items-center w-10 h-10 border-r-[1.5px] border-black mx-auto cursor-pointer">
+                <a
+                  href="https://www.snapchat.com/add/shooting.ads"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon flex justify-center items-center w-10 h-10 border-r-[1.5px] border-black mx-auto cursor-pointer"
+                >
                   <FontAwesomeIcon
-                    icon={faFacebookF}
+                    icon={faSnapchat}
                     className="text-black text-lg"
                   />
                 </a>
-                <a className="icon flex justify-center items-center w-10 h-10 cursor-pointer border-r-[1.5px] border-black mx-auto">
+                <a
+                  href="https://twitter.com/Shooting_agancy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon flex justify-center items-center w-10 h-10 cursor-pointer border-r-[1.5px] border-black mx-auto"
+                >
                   <FontAwesomeIcon
                     icon={faTwitter}
                     className="text-black text-lg"
@@ -201,7 +221,7 @@ const Header = () => {
               </li>
             </ul>
             <NavLink
-              to={`/${lang}/contact`}
+              to={`/${lang}/register_now`}
               className="text-sm font-bold text-black px-2 py-2 border-[1px] border-black rounded-lg cursor-pointer mx-1"
             >
               {t("header.nav.contact")}
@@ -232,54 +252,105 @@ const Header = () => {
               <FaTimes />
             </button>
           </div>
-          <ul className="flex flex-col items-center space-y-4 mt-4 text-lg font-bold">
-            <li>
+          <ul className="flex flex-col items-center space-y-6 mt-4 text-lg font-bold">
+            <li
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+              }}
+            >
               <NavLink to={`/${lang}/home`} className="text-black">
                 {t("header.menu.home")}
               </NavLink>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+              }}
+            >
               <NavLink to={`/${lang}/about_us`} className="text-black">
                 {t("header.menu.about_us")}
               </NavLink>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+              }}
+            >
               <NavLink to={`/${lang}/services`} className="text-black">
                 {t("header.menu.services")}
               </NavLink>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+              }}
+            >
               <NavLink to={`/${lang}/our_projects`} className="text-black">
                 {t("header.menu.our_projects")}
               </NavLink>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+              }}
+            >
               <NavLink to={`/${lang}/our_clients`} className="text-black">
                 {t("header.menu.our_clients")}
               </NavLink>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+              }}
+            >
               <NavLink to={`/${lang}/industry`} className="text-black">
                 {t("header.menu.industry")}
               </NavLink>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+              }}
+            >
               <NavLink to={`/${lang}/blogs`} className="text-black">
                 {t("header.menu.blogs")}
               </NavLink>
             </li>
-            <li>
+            <li
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+              }}
+            >
               <NavLink to={`/${lang}/employment`} className="text-black">
                 {t("header.menu.employment")}
               </NavLink>
             </li>
           </ul>
-          <div className="flex justify-center items-center mt-6">
+          <div
+            className="flex justify-center items-center mt-6"
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+            }}
+          >
+            <NavLink
+              to={`/${lang}/register_now`}
+              className="text-sm font-bold text-black px-6 py-2 border-[1px] border-black rounded-lg"
+            >
+              {t("header.nav.contact")}
+            </NavLink>
+          </div>
+          <div
+            className="flex justify-center items-center mt-6"
+            onClick={() => {
+              changeLanguage();
+              setIsMobileMenuOpen(false);
+            }}
+          >
             <NavLink
               to={`/${lang}/contact`}
               className="text-sm font-bold text-black px-6 py-2 border-[1px] border-black rounded-lg"
             >
-              {t("header.nav.contact")}
+              {i18n.language === "en" ? "العربية" : "ENGLISH"}
             </NavLink>
           </div>
         </div>

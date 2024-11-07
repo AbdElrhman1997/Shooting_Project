@@ -6,6 +6,7 @@ import axios from "axios";
 import Pagination from "../Components/Pagination";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import ReactHtmlParser from "react-html-parser";
 
 const Blogs = () => {
   const [posts, setPosts] = useState([]);
@@ -53,7 +54,7 @@ const Blogs = () => {
         content={
           <div
             className="text-4xl text-black relative text-right bg-white rounded-[10px]"
-            dir="rtl"
+            dir={i18n.language === "ar" ? "rtl" : "ltr"}
           >
             <div className="mx-auto">
               <div className="relative">
@@ -127,9 +128,79 @@ const Blogs = () => {
                   {t("services.industry")}
                 </Link>
               </div>
-              <div className="grid grid-cols-12 xl:gap-12 lg:gap-12 md:gap-6 gap-y-6 py-8 px-4">
+              <div className="grid grid-cols-12 xl:gap-12 lg:gap-12 md:gap-6 gap-y-6 pb-8 pt-4 px-4">
                 {loading ? (
-                  <p>Loading...</p>
+                  <>
+                    <div
+                      className="xl:col-span-4 lg:col-span-4 md:col-span-6 col-span-12 bg-white shadow-lg animate-pulse"
+                      style={{ borderRadius: "0 0 10px 10px" }}
+                    >
+                      {/* Image Skeleton */}
+                      <div className="w-full h-40 bg-gray-200"></div>
+
+                      {/* Content Skeleton */}
+                      <div className="p-4">
+                        {/* Title Skeleton */}
+                        <div className="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
+
+                        {/* Body Text Skeleton */}
+                        <div className="space-y-2 mb-4">
+                          <div className="h-4 bg-gray-200 rounded w-full"></div>
+                          <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+                          <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+                        </div>
+
+                        {/* Button Skeleton */}
+                        <div className="h-8 bg-gray-200 rounded w-1/3"></div>
+                      </div>
+                    </div>
+                    <div
+                      className="xl:col-span-4 lg:col-span-4 md:col-span-6 col-span-12 bg-white shadow-lg animate-pulse"
+                      style={{ borderRadius: "0 0 10px 10px" }}
+                    >
+                      {/* Image Skeleton */}
+                      <div className="w-full h-40 bg-gray-200"></div>
+
+                      {/* Content Skeleton */}
+                      <div className="p-4">
+                        {/* Title Skeleton */}
+                        <div className="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
+
+                        {/* Body Text Skeleton */}
+                        <div className="space-y-2 mb-4">
+                          <div className="h-4 bg-gray-200 rounded w-full"></div>
+                          <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+                          <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+                        </div>
+
+                        {/* Button Skeleton */}
+                        <div className="h-8 bg-gray-200 rounded w-1/3"></div>
+                      </div>
+                    </div>
+                    <div
+                      className="xl:col-span-4 lg:col-span-4 md:col-span-6 col-span-12 bg-white shadow-lg animate-pulse"
+                      style={{ borderRadius: "0 0 10px 10px" }}
+                    >
+                      {/* Image Skeleton */}
+                      <div className="w-full h-40 bg-gray-200"></div>
+
+                      {/* Content Skeleton */}
+                      <div className="p-4">
+                        {/* Title Skeleton */}
+                        <div className="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
+
+                        {/* Body Text Skeleton */}
+                        <div className="space-y-2 mb-4">
+                          <div className="h-4 bg-gray-200 rounded w-full"></div>
+                          <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+                          <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+                        </div>
+
+                        {/* Button Skeleton */}
+                        <div className="h-8 bg-gray-200 rounded w-1/3"></div>
+                      </div>
+                    </div>
+                  </>
                 ) : (
                   posts?.map((post) => (
                     <div
@@ -140,17 +211,30 @@ const Blogs = () => {
                       <img
                         src={`https://admin.shootingads.net/images/${post?.thumbnail}`}
                         alt="Blog Image 1"
-                        className="w-full h-32 object-cover"
+                        className="w-full h-40 object-cover"
                       />
                       <div className="p-4">
-                        <h3 className="text-[14px] font-bold mb-2">
-                          {post?.title_ar}
+                        <h3 className="2xl:text-lg xl:text-xl lg:text-xl md:text-lg text-[14px] font-bold mb-2">
+                          {ReactHtmlParser(
+                            i18n.language == "en"
+                              ? post?.title_en
+                              : post?.title_ar
+                          )}
                         </h3>
-                        <p className="text-gray-600 mb-4 text-[10px] text-justify details-p">
-                          {post?.body_ar}
+                        <p className="text-gray-600 mb-4 2xl:text-base xl:text-base lg:text-base md:text-base text-[10px] text-justify details-p">
+                          {ReactHtmlParser(
+                            i18n.language == "en"
+                              ? post?.body_en
+                              : post?.body_ar
+                          )}
                         </p>
                         <Link
-                          to={`/blogs/${post?.id}`}
+                          to={`/${i18n.language}/blogs/${post?.meta_title
+                            ?.split(" ")
+                            ?.join("_")}`}
+                          onClick={() => {
+                            localStorage.setItem("blog_id", post?.id);
+                          }}
                           className="bg-main text-white px-3 py-1 text-[14px] rounded-md cursor-pointer hover:bg-[#c6282d] font-semibold"
                         >
                           {t("blogs.read_more")}

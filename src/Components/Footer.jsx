@@ -9,9 +9,10 @@ import {
 } from "react-icons/fa";
 import { FaLocationDot, FaSnapchat } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <footer className={`bg-[#000000] md footer_lg_bg`} dir="rtl">
@@ -27,7 +28,43 @@ const Footer = () => {
         <p className="text-xl font-bold text-center mb-12">
           {t("footer.description")}
         </p>
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="text-center">
+            <h2 className="text-xl mb-4 text-main font-bold xl:text-right lg:text-right md:text-right text-center">
+              {t("footer.importantLinks")}
+            </h2>
+            <Link
+              to={`/${i18n.language}/services`}
+              className="text-sm mb-2 flex items-center xl:text-right lg:text-right md:text-right text-center xl:justify-start lg:justify-start md:justify-start justify-center gap-x-2 hover:text-main"
+            >
+              <div className="text-lg">{t("header.nav.services")}</div>
+            </Link>
+            <Link
+              to={`/${i18n.language}/industry`}
+              className="text-sm mb-2 flex items-center xl:text-right lg:text-right md:text-right text-center xl:justify-start lg:justify-start md:justify-start justify-center gap-x-2 hover:text-main"
+            >
+              <div className="text-lg">{t("header.nav.industry")}</div>
+            </Link>{" "}
+            <Link
+              to={`/${i18n.language}/blogs`}
+              className="text-sm mb-2 flex items-center xl:text-right lg:text-right md:text-right text-center xl:justify-start lg:justify-start md:justify-start justify-center gap-x-2 hover:text-main"
+            >
+              <div className="text-lg">{t("header.nav.blogs")}</div>
+            </Link>{" "}
+            <Link
+              to={`/${i18n.language}/employment`}
+              className="text-sm mb-2 flex items-center xl:text-right lg:text-right md:text-right text-center xl:justify-start lg:justify-start md:justify-start justify-center gap-x-2 hover:text-main"
+            >
+              <div className="text-lg">{t("header.nav.employment")}</div>
+            </Link>
+            <Link
+              to={`/${i18n.language}`}
+              className="text-sm mb-2 flex items-center xl:text-right lg:text-right md:text-right text-center xl:justify-start lg:justify-start md:justify-start justify-center gap-x-2 hover:text-main"
+            >
+              <div className="text-lg">{t("footer.privacyPolicy")}</div>
+            </Link>
+          </div>
+
           <div className="text-center">
             <h2 className="text-xl mb-4 text-main font-bold xl:text-right lg:text-right md:text-right text-center">
               {t("footer.addressTitle")}
